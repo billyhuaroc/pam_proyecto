@@ -31,15 +31,14 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:text="3"/>
-        <Button
-            android:id="@+id/verPerfil"
+        <ImageView
             android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/boton_redondo"/>
-
+            android:layout_height="match_parent"
+            tools:srcCompat="@tools:sample/avatars"/>
     </LinearLayout>
 
     <ListView
+        android:id="@+id/listview_salas"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

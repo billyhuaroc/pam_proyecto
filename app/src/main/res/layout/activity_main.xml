@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:id="@+id/contenedorFragments"
     tools:context=".MainActivity">
 
     <TextView
@@ -37,7 +38,7 @@
         android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/nuevoApp"
+        android:id="@+id/btnNuevo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="¿No tienes cuenta?" />
