@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\PC\\Desktop\\VideoMeeting\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\PC\\Desktop\\VideoMeeting\\app\\src\\main\\res\\values\\strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "49",
-                        "endOffsets": "62"
-                    },
-                    "to": {
-                        "startLines": "1064",
-                        "startColumns": "4",
-                        "startOffsets": "62198",
-                        "endColumns": "49",
-                        "endOffsets": "62243"
-                    }
-                },
                 {
                     "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\5faf8b25e4fed9f7e888f396864d1b87\\lifecycle-runtime-2.3.1\\res\\values\\values.xml",
                     "from": {
@@ -76,6 +59,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "7,11,16,14,17,9,10,12,13,15,2,3,4,5,6,8",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "293,479,730,632,781,379,427,526,578,680,57,105,153,201,247,336",
+                        "endColumns": "41,45,49,46,47,46,50,50,52,48,46,46,46,44,44,41",
+                        "endOffsets": "330,520,775,674,824,421,473,572,626,724,99,147,195,241,287,373"
+                    },
+                    "to": {
+                        "startLines": "402,415,416,417,418,419,420,421,422,423,499,500,501,512,513,516",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "19482,20414,20460,20510,20557,20605,20652,20703,20754,20807,25917,25964,26011,26755,26800,26966",
+                        "endColumns": "41,45,49,46,47,46,50,50,52,48,46,46,46,44,44,41",
+                        "endOffsets": "19519,20455,20505,20552,20600,20647,20698,20749,20802,20851,25959,26006,26053,26795,26840,27003"
+                    }
+                },
+                {
                     "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\21b3d769fdb43271e60829527c256d88\\transition-1.2.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -93,7 +93,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\PC\\Desktop\\VideoMeeting\\app\\src\\main\\res\\values\\themes.xml",
+                    "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\values\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -131,6 +131,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "49",
+                        "endOffsets": "62"
+                    },
+                    "to": {
+                        "startLines": "1064",
+                        "startColumns": "4",
+                        "startOffsets": "62198",
+                        "endColumns": "49",
+                        "endOffsets": "62243"
+                    }
+                },
+                {
                     "source": "C:\\Users\\PC\\.gradle\\caches\\transforms-2\\files-2.1\\c8925b41f4a20a47760feaff8220048e\\recyclerview-1.1.0\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
@@ -147,23 +164,6 @@
                         "endLines": "313,661,662,663,671,672,673,955,7234",
                         "endColumns": "55,58,47,55,74,75,71,65,24",
                         "endOffsets": "14897,36589,36637,36693,37379,37455,37527,55857,468742"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\PC\\Desktop\\VideoMeeting\\app\\src\\main\\res\\values\\colors.xml",
-                    "from": {
-                        "startLines": "7,11,16,14,17,9,10,12,13,15,2,3,4,5,6,8",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "293,479,730,632,781,379,427,526,578,680,57,105,153,201,247,336",
-                        "endColumns": "41,45,49,46,47,46,50,50,52,48,46,46,46,44,44,41",
-                        "endOffsets": "330,520,775,674,824,421,473,572,626,724,99,147,195,241,287,373"
-                    },
-                    "to": {
-                        "startLines": "402,415,416,417,418,419,420,421,422,423,499,500,501,512,513,516",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "19482,20414,20460,20510,20557,20605,20652,20703,20754,20807,25917,25964,26011,26755,26800,26966",
-                        "endColumns": "41,45,49,46,47,46,50,50,52,48,46,46,46,44,44,41",
-                        "endOffsets": "19519,20455,20505,20552,20600,20647,20698,20749,20802,20851,25959,26006,26053,26795,26840,27003"
                     }
                 },
                 {
