@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".activities.IniciarSesion">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:text="Bienvenido a"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:layout_marginTop="4dp"
+                android:text="Video Meeting | Oficinas virtuales"
+                android:textColor="@color/colorTextIcons"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_is"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:text="Inicia sesión con tu cuenta"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_header"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_is"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_is">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textStyle="normal"
+                    android:includeFontPadding="false"
+                    android:text="Email:"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:hint="usuario@ejemplo.com"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textStyle="normal"
+                    android:includeFontPadding="false"
+                    android:text="Contraseña:"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/txt_contraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:drawableStart="@drawable/ic_https"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionNext"
+                    android:hint="\u2022 \u2022 \u2022 \u2022 \u2022 \u2022"
+                    android:inputType="textPassword"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_is"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:includeFontPadding="false"
+            android:text="iniciar sesión"
+            android:textColor="@color/colorTextIcons"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/card_is"/>
+
+
+        <TextView
+            android:id="@+id/tvt_cuenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:includeFontPadding="false"
+            android:padding="6dp"
+            android:gravity="center"
+            android:text="No tienes acceso"
+            android:textSize="13sp"
+            android:textColor="@color/colorPrimaryText"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/btn_is"/>
+
+        <TextView
+            android:id="@+id/contacta_aqui"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:padding="6dp"
+            android:gravity="center"
+            android:text="contacta aqui"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvt_cuenta"/>
+
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

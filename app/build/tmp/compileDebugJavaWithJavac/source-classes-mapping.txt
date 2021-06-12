@@ -1,0 +1,8 @@
+ucv/android/videomeeting/activities/MainActivity.java
+ ucv.android.videomeeting.activities.MainActivity
+ucv/android/videomeeting/activities/IniciarSesion.java
+ ucv.android.videomeeting.activities.IniciarSesion
+ucv/android/videomeeting/BuildConfig.java
+ ucv.android.videomeeting.BuildConfig
+ucv/android/videomeeting/activities/ContactaActivity.java
+ ucv.android.videomeeting.activities.ContactaActivity
