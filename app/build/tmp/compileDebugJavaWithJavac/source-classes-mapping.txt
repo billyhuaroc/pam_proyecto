@@ -1,8 +1,14 @@
-ucv/android/videomeeting/activities/MainActivity.java
- ucv.android.videomeeting.activities.MainActivity
+ucv/android/videomeeting/activities/activities/MainActivity.java
+ ucv.android.videomeeting.activities.activities.MainActivity
+ucv/android/videomeeting/activities/utilities/Constants.java
+ ucv.android.videomeeting.activities.utilities.Constants
 ucv/android/videomeeting/activities/IniciarSesion.java
  ucv.android.videomeeting.activities.IniciarSesion
+ucv/android/videomeeting/activities/firebase/MensajeServices.java
+ ucv.android.videomeeting.activities.firebase.MensajeServices
 ucv/android/videomeeting/BuildConfig.java
  ucv.android.videomeeting.BuildConfig
-ucv/android/videomeeting/activities/ContactaActivity.java
- ucv.android.videomeeting.activities.ContactaActivity
+ucv/android/videomeeting/activities/utilities/PreferenceManager.java
+ ucv.android.videomeeting.activities.utilities.PreferenceManager
+ucv/android/videomeeting/activities/activities/ContactaActivity.java
+ ucv.android.videomeeting.activities.activities.ContactaActivity
