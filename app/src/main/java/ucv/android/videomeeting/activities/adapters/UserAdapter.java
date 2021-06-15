@@ -14,14 +14,17 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 import ucv.android.videomeeting.R;
+import ucv.android.videomeeting.activities.listeners.UsersListener;
 import ucv.android.videomeeting.activities.models.Usuario;
 
 public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolder>{
 
     private List<Usuario> usuarios;
+    private UsersListener usersListener; //oyente definido
 
-    public  UserAdapter(List<Usuario> usuarios){
+    public  UserAdapter(List<Usuario> usuarios, UsersListener usersListener){
         this.usuarios = usuarios;
+        this.usersListener = usersListener;//oyente inicializado
     }
 
     @NonNull
@@ -46,7 +49,7 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
         return usuarios.size();
     }
 
-    static class UserViewHolder extends RecyclerView.ViewHolder{
+    class UserViewHolder extends RecyclerView.ViewHolder{//es clase para poder acceder al oyente
 
         TextView textFirstChar, textUsername, textEmail;
         ImageView imageAudioMeeting, imageVideoMeeting;
@@ -63,6 +66,8 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
             textFirstChar.setText(usuario.nombre.substring(0, 1));
             textUsername.setText(String.format("%s %s", usuario.nombre,usuario.cargo));
             textEmail.setText(usuario.email);
+            imageVideoMeeting.setOnClickListener(v -> usersListener.initiateVideoMeeting(usuario));
+            imageAudioMeeting.setOnClickListener(v -> usersListener.initiateAudioMeeting(usuario));
         }
     }
-}
+}//nuestra clase adaptader esta lista

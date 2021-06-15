@@ -798,6 +798,7 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
+attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -1658,6 +1659,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_user_icon
 drawable boton_redondo
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1694,6 +1696,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_audio
 drawable ic_back
 drawable ic_baseline_email_24
 drawable ic_clock_black_24dp
@@ -1706,6 +1709,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_video
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1938,7 +1942,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageAudioMeeting
 id imageBack
+id imageVideoMeeting
 id info
 id inputContraseña
 id inputEmail
@@ -2110,6 +2116,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id swipeRefreshLayout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2130,13 +2137,17 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textEmail
 id textEnd
+id textErrorMessage
+id textFirstChar
 id textSignOut
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTittle
 id textTop
+id textUsername
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2170,6 +2181,8 @@ id unlabeled
 id up
 id useLogo
 id usersRecyclerView
+id viewDivider
+id viewSupporter
 id view_offset_helper
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2263,6 +2276,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_container_user
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -3292,6 +3306,7 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

@@ -1,15 +1,26 @@
-ucv/android/videomeeting/activities/activities/ContactaActivity.java
- ucv.android.videomeeting.activities.activities.ContactaActivity
-ucv/android/videomeeting/activities/utilities/PreferenceManager.java
- ucv.android.videomeeting.activities.utilities.PreferenceManager
+ucv/android/videomeeting/activities/activities/MainActivity.java
+ ucv.android.videomeeting.activities.activities.MainActivity
+ ucv.android.videomeeting.activities.activities.MainActivity$1
+ucv/android/videomeeting/activities/network/ApiServices.java
+ ucv.android.videomeeting.activities.network.ApiServices
+ucv/android/videomeeting/activities/activities/IniciarSesion.java
+ ucv.android.videomeeting.activities.activities.IniciarSesion
 ucv/android/videomeeting/activities/utilities/Constants.java
  ucv.android.videomeeting.activities.utilities.Constants
+ucv/android/videomeeting/activities/adapters/UserAdapter.java
+ ucv.android.videomeeting.activities.adapters.UserAdapter
+ ucv.android.videomeeting.activities.adapters.UserAdapter$UserViewHolder
+ucv/android/videomeeting/activities/listeners/UsersListener.java
+ ucv.android.videomeeting.activities.listeners.UsersListener
 ucv/android/videomeeting/activities/firebase/MensajeServices.java
  ucv.android.videomeeting.activities.firebase.MensajeServices
 ucv/android/videomeeting/BuildConfig.java
  ucv.android.videomeeting.BuildConfig
-ucv/android/videomeeting/activities/activities/MainActivity.java
- ucv.android.videomeeting.activities.activities.MainActivity
- ucv.android.videomeeting.activities.activities.MainActivity$1
-ucv/android/videomeeting/activities/activities/IniciarSesion.java
- ucv.android.videomeeting.activities.activities.IniciarSesion
+ucv/android/videomeeting/activities/network/ApiClient.java
+ ucv.android.videomeeting.activities.network.ApiClient
+ucv/android/videomeeting/activities/utilities/PreferenceManager.java
+ ucv.android.videomeeting.activities.utilities.PreferenceManager
+ucv/android/videomeeting/activities/activities/ContactaActivity.java
+ ucv.android.videomeeting.activities.activities.ContactaActivity
+ucv/android/videomeeting/activities/models/Usuario.java
+ ucv.android.videomeeting.activities.models.Usuario

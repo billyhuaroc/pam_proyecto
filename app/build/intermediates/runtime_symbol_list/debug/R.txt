@@ -797,6 +797,7 @@ int attr suffixText 0x7f0302e1
 int attr suffixTextAppearance 0x7f0302e2
 int attr suffixTextColor 0x7f0302e3
 int attr suggestionRowLayout 0x7f0302e4
+int attr swipeRefreshLayoutProgressSpinnerBackgroundColor 0x7f03037b
 int attr switchMinWidth 0x7f0302e5
 int attr switchPadding 0x7f0302e6
 int attr switchStyle 0x7f0302e7
@@ -1657,6 +1658,7 @@ int drawable abc_textfield_search_material 0x7f070054
 int drawable abc_vector_test 0x7f070055
 int drawable avd_hide_password 0x7f070056
 int drawable avd_show_password 0x7f070057
+int drawable background_user_icon 0x7f0700ac
 int drawable boton_redondo 0x7f070058
 int drawable btn_checkbox_checked_mtrl 0x7f070059
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07005a
@@ -1693,6 +1695,7 @@ int drawable design_password_eye 0x7f070078
 int drawable design_snackbar_background 0x7f070079
 int drawable googleg_disabled_color_18 0x7f07007a
 int drawable googleg_standard_color_18 0x7f07007b
+int drawable ic_audio 0x7f0700ad
 int drawable ic_back 0x7f07007c
 int drawable ic_baseline_email_24 0x7f07007d
 int drawable ic_clock_black_24dp 0x7f07007e
@@ -1705,6 +1708,7 @@ int drawable ic_mtrl_checked_circle 0x7f070084
 int drawable ic_mtrl_chip_checked_black 0x7f070085
 int drawable ic_mtrl_chip_checked_circle 0x7f070086
 int drawable ic_mtrl_chip_close_circle 0x7f070087
+int drawable ic_video 0x7f0700ae
 int drawable material_cursor_drawable 0x7f070088
 int drawable material_ic_calendar_black_24dp 0x7f070089
 int drawable material_ic_clear_black_24dp 0x7f07008a
@@ -1937,7 +1941,9 @@ int id ifRoom 0x7f0800c0
 int id ignore 0x7f0800c1
 int id ignoreRequest 0x7f0800c2
 int id image 0x7f0800c3
+int id imageAudioMeeting 0x7f0801b9
 int id imageBack 0x7f0800c4
+int id imageVideoMeeting 0x7f0801ba
 int id info 0x7f0800c5
 int id inputContraseña 0x7f0800c6
 int id inputEmail 0x7f0800c7
@@ -2109,6 +2115,7 @@ int id stop 0x7f08016c
 int id stretch 0x7f08016d
 int id submenuarrow 0x7f08016e
 int id submit_area 0x7f08016f
+int id swipeRefreshLayout 0x7f0801c2
 int id tabMode 0x7f080170
 int id tag_accessibility_actions 0x7f080171
 int id tag_accessibility_clickable_spans 0x7f080172
@@ -2129,13 +2136,17 @@ int id test_radiobutton_android_button_tint 0x7f080180
 int id test_radiobutton_app_button_tint 0x7f080181
 int id text 0x7f080182
 int id text2 0x7f080183
+int id textEmail 0x7f0801bb
 int id textEnd 0x7f080184
+int id textErrorMessage 0x7f0801bc
+int id textFirstChar 0x7f0801bd
 int id textSignOut 0x7f0801b6
 int id textSpacerNoButtons 0x7f080185
 int id textSpacerNoTitle 0x7f080186
 int id textStart 0x7f080187
 int id textTittle 0x7f0801b7
 int id textTop 0x7f080188
+int id textUsername 0x7f0801be
 int id text_input_end_icon 0x7f080189
 int id text_input_error_icon 0x7f08018a
 int id text_input_start_icon 0x7f08018b
@@ -2169,6 +2180,8 @@ int id unlabeled 0x7f0801a6
 int id up 0x7f0801a7
 int id useLogo 0x7f0801a8
 int id usersRecyclerView 0x7f0801b8
+int id viewDivider 0x7f0801c0
+int id viewSupporter 0x7f0801c1
 int id view_offset_helper 0x7f0801a9
 int id view_tree_lifecycle_owner 0x7f0801aa
 int id view_tree_saved_state_registry_owner 0x7f0801ab
@@ -2262,6 +2275,7 @@ int layout design_navigation_menu 0x7f0b002b
 int layout design_navigation_menu_item 0x7f0b002c
 int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
+int layout item_container_user 0x7f0b0071
 int layout material_chip_input_combo 0x7f0b002f
 int layout material_clock_display 0x7f0b0030
 int layout material_clock_display_divider 0x7f0b0031
@@ -4562,6 +4576,8 @@ int[] styleable StateListDrawableItem { 0x01010199 }
 int styleable StateListDrawableItem_android_drawable 0
 int[] styleable StateSet { 0x7f03010a }
 int styleable StateSet_defaultState 0
+int[] styleable SwipeRefreshLayout { 0x7f03037b }
+int styleable SwipeRefreshLayout_swipeRefreshLayoutProgressSpinnerBackgroundColor 0
 int[] styleable SwitchCompat { 0x01010124, 0x01010125, 0x01010142, 0x7f0302b8, 0x7f0302c7, 0x7f0302e5, 0x7f0302e6, 0x7f0302e8, 0x7f03032e, 0x7f03032f, 0x7f030330, 0x7f03034f, 0x7f030356, 0x7f030357 }
 int styleable SwitchCompat_android_textOn 0
 int styleable SwitchCompat_android_textOff 1

@@ -3,11 +3,11 @@ package ucv.android.videomeeting.activities.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,17 +28,18 @@ import java.util.List;
 
 import ucv.android.videomeeting.R;
 import ucv.android.videomeeting.activities.adapters.UserAdapter;
+import ucv.android.videomeeting.activities.listeners.UsersListener;
 import ucv.android.videomeeting.activities.models.Usuario;
 import ucv.android.videomeeting.activities.utilities.Constants;
 import ucv.android.videomeeting.activities.utilities.PreferenceManager;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements UsersListener {
 
     private PreferenceManager preferenceManager;
     private List<Usuario> usuarios;
     private UserAdapter userAdapter;
     private TextView textErrorMessage;
-    private ProgressBar usersProgressBar;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,51 +69,50 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView userRecyclerView = findViewById(R.id.usersRecyclerView);
         textErrorMessage = findViewById(R.id.textErrorMessage);
-        usersProgressBar = findViewById(R.id.usersProgressBar);
 
         usuarios=new ArrayList<>();
-        userAdapter = new UserAdapter(usuarios);
+        userAdapter = new UserAdapter(usuarios, this); //pasamos el oyente al usuario
         userRecyclerView.setAdapter(userAdapter);
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout);
+        swipeRefreshLayout.setOnRefreshListener(this::getUsers); //actualizar metodo
 
         getUsers();
     }
 
     private void getUsers(){
-        usersProgressBar.setVisibility(View.VISIBLE);
+        swipeRefreshLayout.setRefreshing(true); //actualizar como true
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECION_USERS)
                 .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull @NotNull Task<QuerySnapshot> task) {
-                        usersProgressBar.setVisibility(View.GONE);
-                        String miUserId = preferenceManager.getString(Constants.KEY_USER_ID);
-                        if (task.isSuccessful() && task.getResult()!=null){
-                            for (QueryDocumentSnapshot documentSnapshot : task.getResult()){
-                                if (miUserId.equals(documentSnapshot.getId())){
-                                    //aquí, mostraremos la lista de usuarios excepto el usuario
-                                    // que ha iniciado sesión actualmente, porque nadie se reunirá
-                                    //con él mismo. es por eso que excluimos de la lista a
-                                    // un usuario que inició sesión.
-                                    continue;
-                                }
-                                Usuario usuario = new Usuario();
-                                usuario.nombre = documentSnapshot.getString(Constants.KEY_NOMBRE);
-                                usuario.cargo = documentSnapshot.getString(Constants.KEY_CARGO);
-                                usuario.email = documentSnapshot.getString(Constants.KEY_EMAIL);
-                                usuario.token = documentSnapshot.getString(Constants.KEY_FCM_TOKEN);
-                                usuarios.add(usuario);
+                .addOnCompleteListener(task -> {
+                    swipeRefreshLayout.setRefreshing(false); //actualizar como true de respuesta
+                    String miUserId = preferenceManager.getString(Constants.KEY_USER_ID);
+                    if (task.isSuccessful() && task.getResult()!=null){
+                        usuarios.clear(); //borrar la lista de usuarios antes de agregar new data
+                        for (QueryDocumentSnapshot documentSnapshot : task.getResult()){
+                            if (miUserId.equals(documentSnapshot.getId())){
+                                //aquí, mostraremos la lista de usuarios excepto el usuario
+                                // que ha iniciado sesión actualmente, porque nadie se reunirá
+                                //con él mismo. es por eso que excluimos de la lista a
+                                // un usuario que inició sesión.
+                                continue;
                             }
-                            if (usuarios.size()>0){
-                                userAdapter.notifyDataSetChanged();
-                            }else {
-                                textErrorMessage.setText(String.format("%s","Usuarios no disponibles"));
-                                textErrorMessage.setVisibility(View.VISIBLE);
-                            }
-                        }else{
+                            Usuario usuario = new Usuario();
+                            usuario.nombre = documentSnapshot.getString(Constants.KEY_NOMBRE);
+                            usuario.cargo = documentSnapshot.getString(Constants.KEY_CARGO);
+                            usuario.email = documentSnapshot.getString(Constants.KEY_EMAIL);
+                            usuario.token = documentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                            usuarios.add(usuario);
+                        }
+                        if (usuarios.size()>0){
+                            userAdapter.notifyDataSetChanged();
+                        }else {
                             textErrorMessage.setText(String.format("%s","Usuarios no disponibles"));
                             textErrorMessage.setVisibility(View.VISIBLE);
                         }
+                    }else{
+                        textErrorMessage.setText(String.format("%s","Usuarios no disponibles"));
+                        textErrorMessage.setVisibility(View.VISIBLE);
                     }
                 });
     }
@@ -145,5 +145,25 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 })
                 .addOnFailureListener(e -> Toast.makeText(MainActivity.this, "No pudo cerrar sesión", Toast.LENGTH_SHORT).show());
+    }
+
+    //implementamos metodos oyentes
+
+    @Override
+    public void initiateVideoMeeting(Usuario usuario) {
+        if(usuario.token == null  || usuario.token.trim().isEmpty()){
+            Toast.makeText(this, ""+usuario.nombre + "no habilitado para reunion", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "Video reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void initiateAudioMeeting(Usuario usuario) {
+        if(usuario.token == null  || usuario.token.trim().isEmpty()){
+            Toast.makeText(this, ""+usuario.nombre + "no habilitado para audio", Toast.LENGTH_SHORT).show();
+        }else {
+            Toast.makeText(this, "Audio reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
+        }
     }
 }
