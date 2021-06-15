@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    tools:context=".activities.ContactaActivity">
+    tools:context=".activities.activities.ContactaActivity">
 
     <LinearLayout
         android:id="@+id/layout_header"
@@ -34,7 +34,7 @@
             android:textStyle="bold"
             android:includeFontPadding="false"
             android:text="Contacta aquí"
-            android:textSize="15sp"
+            android:textSize="16sp"
             android:textColor="@color/colorTextIcons"/>
 
     </LinearLayout>
@@ -57,9 +57,10 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
-                android:textColor="#000"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
                 android:justificationMode="inter_word"
-                android:text="Sabemos lo importante que es para ti interacturar con tus compañeros de trabajo, motivo de no tenercer acceso se debe a no encontrarte registrado en planilla. Para mayor información contacta al siguiente número: 926818526 Te contestaremos a la brevedad posible, un abrazo.">
+                android:text="Sabemos lo importante que es para ti interacturar con tus compañeros de trabajo, motivo de no tener acceso se debe a no encontrarte registrado en planilla. Para mayor información contacta al siguiente número: 926818526 Te contestaremos a la brevedad posible, un abrazo.">
 
             </TextView>
 

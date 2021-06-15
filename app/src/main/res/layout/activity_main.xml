@@ -33,9 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="Cerrar sesión"
             android:textColor="@color/colorBackground"
-            android:textSize="13sp"/>
+            android:textSize="16sp"/>
 
     </LinearLayout>
 
@@ -48,4 +49,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layout_header"/>
 
+    <TextView
+        android:id="@+id/textErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/layout_header"/>
+
+    <ProgressBar
+        android:id="@+id/usersProgressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_header"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
