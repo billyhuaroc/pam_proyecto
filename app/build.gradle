@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "ucv.android.videomeeting"
-        minSdkVersion 21
+            minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -58,5 +58,4 @@ dependencies {
     //Firebase
     implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation 'com.google.firebase:firebase-firestore:23.0.1'
-    implementation 'com.google.firebase:firebase-core:19.0.0'
 }

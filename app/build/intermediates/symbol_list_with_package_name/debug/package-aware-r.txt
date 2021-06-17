@@ -1003,6 +1003,8 @@ color colorAccent
 color colorBackground
 color colorDivider
 color colorHintText
+color colorMeetingInvitationEnd
+color colorMeetingInvitationStart
 color colorPrimary
 color colorPrimaryDark
 color colorPrimaryText
@@ -1659,8 +1661,11 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background_accept_invitation
+drawable background_meeting_invitation
+drawable background_meeting_invitation_user_icon
+drawable background_reject_invitation
 drawable background_user_icon
-drawable boton_redondo
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1696,6 +1701,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_accept
 drawable ic_audio
 drawable ic_back
 drawable ic_baseline_email_24
@@ -1709,6 +1715,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_reject
 drawable ic_video
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1942,8 +1949,12 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageAcceptInvitation
 id imageAudioMeeting
 id imageBack
+id imageMeetingType
+id imageRejectInvitation
+id imageStopInvitation
 id imageVideoMeeting
 id info
 id inputContraseña
@@ -2137,10 +2148,13 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
+id textCorreo
 id textEmail
 id textEnd
 id textErrorMessage
 id textFirstChar
+id textIncomingMeeting
+id textSendingMeeting
 id textSignOut
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -2258,8 +2272,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_contacta
+layout activity_incoming_invitation
 layout activity_iniciar_sesion
 layout activity_main
+layout activity_outgoing_invitation
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
