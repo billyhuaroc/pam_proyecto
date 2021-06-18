@@ -4,14 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONArray;
@@ -32,7 +32,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
     //definimos administrador de preferencias
     private PreferenceManager preferenceManager;
     //y el token del remitente
-    private String invitarToken = null;
+    private String inviterToken = null;
 
 
     @Override
@@ -44,14 +44,15 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
 
         //usaremos firebase y le pasaremos el oyente
-        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
             @Override
-            public void onComplete(@NonNull @NotNull Task<String> task) {
+            public void onComplete(@NonNull @NotNull Task<InstanceIdResult> task) {
                 if(task.isSuccessful() && task.getResult()!=null) {
-                    invitarToken = task.getResult();
+                    inviterToken = task.getResult().getId();
                 }
             }
         });
+
 
         ImageView imageMeetingType = findViewById(R.id.imageMeetingType);
         //copiamos el nombre de la pagina principal
@@ -86,7 +87,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             //acabaremos de regresar de la actividad reciente
             onBackPressed();
         });
-        if (meetingType!=null){
+        if (meetingType!=null || usuario!=null){
             //llamamos a iniciar reunion y el primer parametro es el tipo
             initiateMeeting(meetingType,usuario.token); //no se si se vaya a pasar esto
         }
@@ -107,7 +108,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             data.put(Constants.KEY_NOMBRE,preferenceManager.getString(Constants.KEY_NOMBRE));
             data.put(Constants.KEY_CARGO,preferenceManager.getString(Constants.KEY_CARGO));
             data.put(Constants.KEY_EMAIL,preferenceManager.getString(Constants.KEY_EMAIL));
-            data.put(Constants.REMOTE_MSG_INVITER_TOKEN, invitarToken);
+            data.put(Constants.REMOTE_MSG_INVITER_TOKEN, inviterToken);
 
             body.put(Constants.REMOTE_MSG_DATA,data);
             body.put(Constants.REMOTE_MSG_REGISTRATION_IDS,tokens);
@@ -116,7 +117,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             sendRemoteMessage(body.toString(),Constants.REMOTE_MSG_INVITATION);
 
         }catch (Exception exception){
-            Toast.makeText(this, exception.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, exception.getMessage(), Toast.LENGTH_LONG).show();
             finish();
         }
         //este metodo de inicio de reunion esta completo
@@ -143,7 +144,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
-                //fracaso
+                Toast.makeText(OutgoingInvitationActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
