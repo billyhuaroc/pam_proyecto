@@ -34,10 +34,10 @@ public class Constants {
         encabezados.put(
                 Constants.REMOTE_MSG_AUTHORIZATION,
                 //le pasaremos la clave de firebase
-                "key=AAAA0ixlxq8:APA91bGim-3g4CM1rpWTduEaJ15FarkUYGGN6S52QipI2YvkGz7jalNDqhV63MbClsBEiLDbTk974gmcC0KMUhtlzEZs5H0nysiqO5MJ0FwHt7WPnTWbp0wXpo_CYULwAx4rnUNQ3sVM   "
+                "key=AAAA0ixlxq8:APA91bGim-3g4CM1rpWTduEaJ15FarkUYGGN6S52QipI2YvkGz7jalNDqhV63MbClsBEiLDbTk974gmcC0KMUhtlzEZs5H0nysiqO5MJ0FwHt7WPnTWbp0wXpo_CYULwAx4rnUNQ3sVM"
         );
         //el segundo es el contenido
-        encabezados.put(Constants.REMOTE_MSG_CONTENT_TYPE, "apliccation/json");
+        encabezados.put(Constants.REMOTE_MSG_CONTENT_TYPE, "application/json");
         // y retornamos el mapa de encabezados
         return encabezados;
     }

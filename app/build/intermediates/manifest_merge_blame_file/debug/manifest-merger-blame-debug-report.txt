@@ -13,205 +13,221 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:6:5-67
 11-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:6:22-64
-12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:22:5-79
-12-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:22:22-76
-13    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-13-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:23:5-68
-13-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:23:22-65
-14    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-14-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:25:5-82
-14-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:25:22-79
-15
-16    <application
-16-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:8:5-36:19
-17        android:allowBackup="true"
-17-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:9:9-35
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.5.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c7ef75b126c8b6bfe64df1480ebbdd5a\core-1.5.0\AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:fullBackupContent="false"
-20-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:10:9-42
-21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:11:9-43
-22        android:label="@string/app_name"
-22-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:12:9-41
-23        android:roundIcon="@mipmap/ic_launcher_round"
-23-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:13:9-54
-24        android:supportsRtl="true"
-24-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:14:9-35
-25        android:testOnly="true"
-26        android:theme="@style/Theme.VideoMeeting"
-26-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:16:9-50
-27        android:usesCleartextTraffic="true" >
-27-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:15:9-44
-28        <activity android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity" />
-28-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:9-95
-28-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:19-83
-29        <activity android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity" />
-29-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:19:9-86
-29-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:19:19-83
-30        <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
-30-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:20:9-76
-30-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:20:19-73
-31        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" >
-31-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:9-27:20
-31-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:19-70
-32            <intent-filter>
-32-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:22:13-26:29
-33                <action android:name="android.intent.action.MAIN" />
-33-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:17-69
-33-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:25-66
-34
-35                <category android:name="android.intent.category.LAUNCHER" />
-35-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:25:17-77
-35-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:25:27-74
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" />
-38-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:28:9-72
-38-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:28:19-69
-39
-40        <service
-40-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:30:9-35:19
-41            android:name="ucv.android.videomeeting.activities.firebase.MensajeServices"
-41-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:30:18-69
-42            android:exported="false" >
-42-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:31:13-37
-43            <intent-filter>
-43-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:32:13-34:29
-44                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-44-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:33:17-77
-44-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:33:25-75
+12
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:13:5-79
+15-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:13:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:24:5-68
+16-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:24:22-65
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:26:5-82
+17-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:26:22-79
+18
+19    <application
+19-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:8:5-41:19
+20        android:allowBackup="true"
+20-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:9:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.5.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c7ef75b126c8b6bfe64df1480ebbdd5a\core-1.5.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:fullBackupContent="false"
+23-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:10:9-42
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:11:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:12:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:13:9-54
+27        android:supportsRtl="true"
+27-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:14:9-35
+28        android:testOnly="true"
+29        android:theme="@style/Theme.VideoMeeting"
+29-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:16:9-50
+30        android:usesCleartextTraffic="true" >
+30-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:15:9-44
+31        <activity
+31-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:9-20:25
+32            android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity"
+32-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:19-83
+33            android:screenOrientation="portrait" />
+33-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:19:13-49
+34        <activity
+34-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:9-22:51
+35            android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity"
+35-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:19-83
+36            android:screenOrientation="portrait" />
+36-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:22:13-49
+37        <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
+37-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:9-76
+37-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:19-73
+38        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" >
+38-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:24:9-26:20
+38-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:24:19-70
+39        </activity>
+40        <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" >
+40-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:27:9-33:20
+40-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:27:19-69
+41            <intent-filter>
+41-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:28:13-32:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:29:17-69
+42-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:29:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:31:17-77
+44-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:31:27-74
 45            </intent-filter>
-46        </service>
+46        </activity>
 47
-48        <receiver
-48-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:28:9-35:20
-49            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-49-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:29:13-78
-50            android:exported="true"
-50-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:30:13-36
-51            android:permission="com.google.android.c2dm.permission.SEND" >
-51-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:31:13-73
-52            <intent-filter>
-52-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:32:13-34:29
-53                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-53-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:33:17-81
-53-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:33:25-78
-54            </intent-filter>
-55        </receiver>
-56        <!--
-57             FirebaseMessagingService performs security checks at runtime,
-58             but set to not exported to explicitly avoid allowing another app to call it.
-59        -->
-60        <service
-60-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:41:9-48:19
-61            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-61-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:42:13-82
-62            android:directBootAware="true"
-62-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:43:13-43
-63            android:exported="false" >
-63-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:44:13-37
-64            <intent-filter android:priority="-500" >
-64-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:32:13-34:29
-65                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-65-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:33:17-77
-65-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:33:25-75
-66            </intent-filter>
-67        </service>
-68        <service
-68-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:49:9-55:19
-69            android:name="com.google.firebase.components.ComponentDiscoveryService"
-69-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:50:13-84
-70            android:directBootAware="true"
-70-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:35:13-43
-71            android:exported="false" >
-71-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:51:13-37
-72            <meta-data
-72-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:52:13-54:85
-73                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-73-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:53:17-119
-74                android:value="com.google.firebase.components.ComponentRegistrar" />
-74-->[com.google.firebase:firebase-messaging:22.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7c2b1dcd645b8992ec49466f01613cfa\firebase-messaging-22.0.0\AndroidManifest.xml:54:17-82
-75            <meta-data
-75-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:20:13-22:85
-76                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-76-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:21:17-111
-77                android:value="com.google.firebase.components.ComponentRegistrar" />
-77-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:22:17-82
-78            <meta-data
-78-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ae9e7e641757d026e311f1995ed12597\firebase-datatransport-18.0.0\AndroidManifest.xml:28:13-30:85
-79                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-79-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ae9e7e641757d026e311f1995ed12597\firebase-datatransport-18.0.0\AndroidManifest.xml:29:17-115
-80                android:value="com.google.firebase.components.ComponentRegistrar" />
-80-->[com.google.firebase:firebase-datatransport:18.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ae9e7e641757d026e311f1995ed12597\firebase-datatransport-18.0.0\AndroidManifest.xml:30:17-82
-81            <meta-data
-81-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a30eae67e308f2990f34fd0ceabcf627\firebase-installations-17.0.0\AndroidManifest.xml:18:13-20:85
-82                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-82-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a30eae67e308f2990f34fd0ceabcf627\firebase-installations-17.0.0\AndroidManifest.xml:19:17-127
-83                android:value="com.google.firebase.components.ComponentRegistrar" />
-83-->[com.google.firebase:firebase-installations:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a30eae67e308f2990f34fd0ceabcf627\firebase-installations-17.0.0\AndroidManifest.xml:20:17-82
-84        </service>
-85
-86        <provider
-86-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
-87            android:name="com.google.firebase.provider.FirebaseInitProvider"
-87-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:27:13-77
-88            android:authorities="ucv.android.videomeeting.firebaseinitprovider"
-88-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:28:13-72
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:29:13-43
-90            android:exported="false"
-90-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:30:13-37
-91            android:initOrder="100" />
-91-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:31:13-36
-92
-93        <activity
-93-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-94            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-94-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-95            android:exported="false"
-95-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-96            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-96-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-97
-98        <meta-data
-98-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-99            android:name="com.google.android.gms.version"
-99-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-100            android:value="@integer/google_play_services_version" />
-100-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-101
-102        <service
-102-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:29:9-35:19
-103            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-103-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:30:13-103
-104            android:exported="false" >
-104-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:31:13-37
-105            <meta-data
-105-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:32:13-34:39
-106                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-106-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:33:17-94
-107                android:value="cct" />
-107-->[com.google.android.datatransport:transport-backend-cct:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\e40e321fe503541ce8e272d3ff5285f1\transport-backend-cct-3.0.0\AndroidManifest.xml:34:17-36
-108        </service>
-109        <service
-109-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:26:9-30:19
-110            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-110-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:27:13-117
-111            android:exported="false"
-111-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:28:13-37
-112            android:permission="android.permission.BIND_JOB_SERVICE" >
-112-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:29:13-69
-113        </service>
-114
-115        <receiver
-115-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:32:9-34:40
-116            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-116-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:33:13-132
-117            android:exported="false" />
-117-->[com.google.android.datatransport:transport-runtime:3.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\5cdcca82c4c07cfcc748932a974bd9be\transport-runtime-3.0.0\AndroidManifest.xml:34:13-37
-118    </application>
-119
-120</manifest>
+48        <service
+48-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:35:9-40:19
+49            android:name="ucv.android.videomeeting.activities.firebase.MensajeServices"
+49-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:35:18-69
+50            android:exported="false" >
+50-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:36:13-37
+51            <intent-filter>
+51-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:37:13-39:29
+52                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+52-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:17-77
+52-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:25-75
+53            </intent-filter>
+54        </service>
+55        <!--
+56             FirebaseMessagingService performs security checks at runtime,
+57             but set to not exported to explicitly avoid allowing another app to call it.
+58        -->
+59        <service
+59-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:28:9-35:19
+60            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+60-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:29:13-82
+61            android:directBootAware="true"
+61-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:30:13-43
+62            android:exported="false" >
+62-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:31:13-37
+63            <intent-filter android:priority="-500" >
+63-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:37:13-39:29
+64                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+64-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:17-77
+64-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:25-75
+65            </intent-filter>
+66        </service>
+67        <service
+67-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:36:9-42:19
+68            android:name="com.google.firebase.components.ComponentDiscoveryService"
+68-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:37:13-84
+69            android:directBootAware="true"
+69-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+70            android:exported="false" >
+70-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:38:13-37
+71            <meta-data
+71-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:39:13-41:85
+72                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+72-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:40:17-119
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:41:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:20:13-22:85
+75                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+75-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:21:17-111
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-firestore:23.0.1] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\9462a20fd934ebb5d788c2110a920218\firebase-firestore-23.0.1\AndroidManifest.xml:22:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:32:13-34:85
+78                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+78-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:33:17-96
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:34:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ce9bee342af3a32dd45cfd06d4affef2\firebase-installations-16.3.2\AndroidManifest.xml:17:13-19:85
+81                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+81-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ce9bee342af3a32dd45cfd06d4affef2\firebase-installations-16.3.2\AndroidManifest.xml:18:17-127
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-installations:16.3.2] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ce9bee342af3a32dd45cfd06d4affef2\firebase-installations-16.3.2\AndroidManifest.xml:19:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d6210af4a5abf70e17829a8cf0dd318\firebase-datatransport-17.0.3\AndroidManifest.xml:28:13-30:85
+84                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+84-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d6210af4a5abf70e17829a8cf0dd318\firebase-datatransport-17.0.3\AndroidManifest.xml:29:17-115
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-datatransport:17.0.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\7d6210af4a5abf70e17829a8cf0dd318\firebase-datatransport-17.0.3\AndroidManifest.xml:30:17-82
+86        </service>
+87
+88        <receiver
+88-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:37:9-44:20
+89            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+89-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:38:13-78
+90            android:exported="true"
+90-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:39:13-36
+91            android:permission="com.google.android.c2dm.permission.SEND" >
+91-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:40:13-73
+92            <intent-filter>
+92-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:41:13-43:29
+93                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+93-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:42:17-81
+93-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:42:25-78
+94            </intent-filter>
+95        </receiver>
+96
+97        <provider
+97-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+98            android:name="com.google.firebase.provider.FirebaseInitProvider"
+98-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+99            android:authorities="ucv.android.videomeeting.firebaseinitprovider"
+99-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+100            android:directBootAware="true"
+100-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+101            android:exported="false"
+101-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+102            android:initOrder="100" />
+102-->[com.google.firebase:firebase-common:20.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\ba99f0db75ff1152780be89a71df52d7\firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+103
+104        <activity
+104-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+105            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+105-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+106            android:exported="false"
+106-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+107-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\fb41218eb17d9f87bd2561850271f62e\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+108
+109        <meta-data
+109-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+110            android:name="com.google.android.gms.version"
+110-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+111            android:value="@integer/google_play_services_version" />
+111-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\c059897ed48e949969f208f882057f81\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+112
+113        <service
+113-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:29:9-35:19
+114            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+114-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:30:13-103
+115            android:exported="false" >
+115-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:31:13-37
+116            <meta-data
+116-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:32:13-34:39
+117                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+117-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:33:17-94
+118                android:value="cct" />
+118-->[com.google.android.datatransport:transport-backend-cct:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\0dee13e93384712dbc87d26c91384a80\transport-backend-cct-2.2.0\AndroidManifest.xml:34:17-36
+119        </service>
+120        <service
+120-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:26:9-30:19
+121            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+121-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:27:13-117
+122            android:exported="false"
+122-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:28:13-37
+123            android:permission="android.permission.BIND_JOB_SERVICE" >
+123-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:29:13-69
+124        </service>
+125
+126        <receiver
+126-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:32:9-34:40
+127            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+127-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:33:13-132
+128            android:exported="false" />
+128-->[com.google.android.datatransport:transport-runtime:2.2.0] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\dc9b079b2a5d8a18b9a2db9cd60ef68e\transport-runtime-2.2.0\AndroidManifest.xml:34:13-37
+129    </application>
+130
+131</manifest>
