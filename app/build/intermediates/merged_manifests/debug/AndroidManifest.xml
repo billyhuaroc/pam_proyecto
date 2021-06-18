@@ -12,7 +12,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -24,7 +23,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.VideoMeeting" >
+        android:theme="@style/Theme.VideoMeeting"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity" />
+        <activity android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity" />
         <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
         <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" >
             <intent-filter>
@@ -35,9 +37,11 @@
         </activity>
         <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" />
 
-        <service android:name="ucv.android.videomeeting.activities.firebase.MensajeServices" >
+        <service
+            android:name="ucv.android.videomeeting.activities.firebase.MensajeServices"
+            android:exported="false" >
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
 
@@ -75,28 +79,9 @@
                 android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
-
-        <receiver
-            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-            android:enabled="true"
-            android:exported="false" >
-        </receiver>
-
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementService"
-            android:enabled="true"
-            android:exported="false" />
-        <service
-            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"

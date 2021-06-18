@@ -17,7 +17,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.jetbrains.annotations.NotNull;
@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
 
         findViewById(R.id.textSignOut).setOnClickListener(v -> SingOut());
 
-
         FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
             @Override
             public void onComplete(@NonNull @NotNull Task<String> task) {
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
                 }
             }
         });
+
 
         RecyclerView userRecyclerView = findViewById(R.id.usersRecyclerView);
         textErrorMessage = findViewById(R.id.textErrorMessage);
@@ -151,11 +151,13 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
 
     @Override
     public void initiateVideoMeeting(Usuario usuario) {
-        if(usuario.token == null  || usuario.token.trim().isEmpty()){
-            Toast.makeText(this, ""+usuario.nombre + "no habilitado para reunion", Toast.LENGTH_SHORT).show();
-        }else {
-            Toast.makeText(this, "Video reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
-        }
+        //Toast.makeText(this, "Video reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getApplicationContext(),OutgoingInvitationActivity.class);
+        // pasamos el objeto directamente con la intencion que se debe a que la clase usuario
+        //implementa la interfaz serializable
+        intent.putExtra("usuario",usuario);
+        intent.putExtra("type","video");
+        startActivity(intent);
     }
 
     @Override

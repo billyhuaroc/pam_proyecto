@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_incoming_invitation.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\activity_incoming_invitation.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -20,6 +24,10 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\item_container_user.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_meeting_invitation.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_meeting_invitation.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -34,6 +42,18 @@
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_outgoing_invitation.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\activity_outgoing_invitation.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_accept_invitation.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_accept_invitation.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_reject.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_reject.xml"
     },
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
@@ -56,10 +76,6 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\movile.jpg"
     },
     {
-        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boton_redondo.xml.flat",
-        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\boton_redondo.xml"
-    },
-    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_video.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_video.xml"
     },
@@ -68,12 +84,24 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_meeting_invitation_user_icon.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_meeting_invitation_user_icon.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_https.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_https.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_accept.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_accept.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_reject_invitation.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_reject_invitation.xml"
     },
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_email.xml.flat",
