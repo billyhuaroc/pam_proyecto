@@ -15,8 +15,11 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.VideoMeeting"
         tools:targetApi="m">
-        <activity android:name=".activities.activities.OutgoingInvitationActivity"></activity>
-        <activity android:name=".activities.activities.IncomingInvitationActivity" />
+        <activity android:name=".activities.activities.OutgoingInvitationActivity"
+            android:screenOrientation="portrait"
+            ></activity>
+        <activity android:name=".activities.activities.IncomingInvitationActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".activities.activities.ContactaActivity" />
         <activity android:name=".activities.activities.IniciarSesion">
             <intent-filter>
