@@ -1,12 +1,23 @@
 package ucv.android.videomeeting.activities.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import ucv.android.videomeeting.R;
+import ucv.android.videomeeting.activities.network.ApiClient;
+import ucv.android.videomeeting.activities.network.ApiServices;
 import ucv.android.videomeeting.activities.utilities.Constants;
 
 public class IncomingInvitationActivity extends AppCompatActivity {
@@ -46,5 +57,78 @@ public class IncomingInvitationActivity extends AppCompatActivity {
         ));
 
         textCorreo.setText(getIntent().getStringExtra(Constants.KEY_EMAIL));
+
+        ImageView imageAcceptInvitation = findViewById(R.id.imageAcceptInvitation);
+        imageAcceptInvitation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendInvitationResponse(
+                        Constants.REMOTE_MSG_INVITATION_ACCEPTED,
+                        getIntent().getStringExtra(Constants.REMOTE_MSG_INVITER_TOKEN)
+                );
+            }
+        });
+        ImageView imageRejectInvitation = findViewById(R.id.imageRejectInvitation);
+        imageRejectInvitation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendInvitationResponse(
+                        Constants.REMOTE_MSG_INVITATION_REJECTED,
+                        getIntent().getStringExtra(Constants.REMOTE_MSG_INVITER_TOKEN)
+                );
+            }
+        });
+    }
+
+    private void sendInvitationResponse(String type, String recibeToken){
+        try {
+            JSONArray tokens = new JSONArray();
+            tokens.put(recibeToken);
+
+            JSONObject body = new JSONObject();
+            JSONObject data = new JSONObject();
+
+            data.put(Constants.REMOTE_MSG_TYPE,Constants.REMOTE_MSG_INVITATION_RESPONSE);
+            data.put(Constants.REMOTE_MSG_INVITATION_RESPONSE,type);
+
+            body.put(Constants.REMOTE_MSG_DATA, data);
+            body.put(Constants.REMOTE_MSG_REGISTRATION_IDS,tokens);
+
+            sendRemoteMessage(body.toString(),type);
+        }catch (Exception e){
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void sendRemoteMessage(String remoteMessageBody, String type){
+        //llamada usando la red retrofit
+        ApiClient.getCliente().create(ApiServices.class).sendRemoteMessage(
+                Constants.getRemoteMessageEncabezados(),remoteMessageBody
+        ).enqueue(new Callback<String>() { //nos dara dos devoluciones
+            @Override
+            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
+                //respuesta
+                if (response.isSuccessful()){
+                    if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
+                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion aceptada", Toast.LENGTH_SHORT    ).show();
+                    }
+                    else{
+                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion rechazada", Toast.LENGTH_SHORT    ).show();
+                    }
+                    /*if (type.equals(Constants.REMOTE_MSG_INVITATION)){
+                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion enviada", Toast.LENGTH_SHORT    ).show();
+                    }*/
+                }else{
+                    Toast.makeText(IncomingInvitationActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+                }
+                finish();
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
+                Toast.makeText(IncomingInvitationActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
     }//este metodo de reunion entrante esta completo
 }

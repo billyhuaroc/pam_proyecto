@@ -27,6 +27,11 @@ public class Constants {
     public static final String REMOTE_MSG_DATA = "data";
     public static final String REMOTE_MSG_REGISTRATION_IDS = "registration_ids";
 
+    public static final String REMOTE_MSG_INVITATION_RESPONSE = "invitationResponse";
+
+    public static final String REMOTE_MSG_INVITATION_ACCEPTED = "accepted";
+    public static final String REMOTE_MSG_INVITATION_REJECTED = "rejected";
+
     //obtener encabezados de mensajes remotos
     public static HashMap<String, String> getRemoteMessageEncabezados(){
         HashMap<String,String> encabezados = new HashMap<>();
