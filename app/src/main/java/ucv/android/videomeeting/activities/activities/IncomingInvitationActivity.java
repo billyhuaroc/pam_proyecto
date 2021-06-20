@@ -2,15 +2,24 @@ package ucv.android.videomeeting.activities.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import java.net.URL;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -110,18 +119,34 @@ public class IncomingInvitationActivity extends AppCompatActivity {
                 //respuesta
                 if (response.isSuccessful()){
                     if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
-                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion aceptada", Toast.LENGTH_SHORT    ).show();
+                        try {
+                            URL serverUrl = new URL("https://meet.jit.si");
+                            JitsiMeetConferenceOptions conferenceOptions =
+                                    new JitsiMeetConferenceOptions.Builder()
+                                    .setServerURL(serverUrl)
+                                    .setWelcomePageEnabled(false)
+                                    .setRoom(getIntent().getStringExtra(Constants.REMOTE_MSG_MEETING_ROOM))
+                                    .build();
+                            JitsiMeetActivity.launch(IncomingInvitationActivity.this,conferenceOptions);
+                            finish();
+
+                        }catch (Exception e){
+                            Toast.makeText(IncomingInvitationActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                        //Toast.makeText(IncomingInvitationActivity.this, "Invitacion aceptada", Toast.LENGTH_SHORT    ).show();
                     }
                     else{
                         Toast.makeText(IncomingInvitationActivity.this, "Invitacion rechazada", Toast.LENGTH_SHORT    ).show();
+                        finish();
                     }
                     /*if (type.equals(Constants.REMOTE_MSG_INVITATION)){
                         Toast.makeText(IncomingInvitationActivity.this, "Invitacion enviada", Toast.LENGTH_SHORT    ).show();
                     }*/
                 }else{
                     Toast.makeText(IncomingInvitationActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+                    finish();
                 }
-                finish();
             }
 
             @Override
@@ -130,5 +155,33 @@ public class IncomingInvitationActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }//este metodo de reunion entrante esta completo
+    }
+    private BroadcastReceiver invitationResponseReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String type = intent.getStringExtra(Constants.REMOTE_MSG_INVITATION_RESPONSE);
+            if (type.equals(Constants.REMOTE_MSG_INVITATION_CANCELLED)){
+                Toast.makeText(context, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        }
+    };
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
+                invitationResponseReceiver,
+                new IntentFilter(Constants.REMOTE_MSG_INVITATION_RESPONSE)
+        );
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(
+                invitationResponseReceiver
+        );
+    }
+    //este metodo de reunion entrante esta completo
 }
