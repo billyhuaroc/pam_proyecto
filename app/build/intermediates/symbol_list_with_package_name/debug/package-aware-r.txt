@@ -23,6 +23,12 @@ anim btn_radio_to_off_mtrl_ring_outer_path_animation
 anim btn_radio_to_on_mtrl_dot_group_animation
 anim btn_radio_to_on_mtrl_ring_outer_animation
 anim btn_radio_to_on_mtrl_ring_outer_path_animation
+anim catalyst_fade_in
+anim catalyst_fade_out
+anim catalyst_push_up_in
+anim catalyst_push_up_out
+anim catalyst_slide_down
+anim catalyst_slide_up
 anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
@@ -94,6 +100,9 @@ attr actionProviderClass
 attr actionTextColorAlpha
 attr actionViewClass
 attr activityChooserViewStyle
+attr actualImageResource
+attr actualImageScaleType
+attr actualImageUri
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
@@ -119,6 +128,7 @@ attr autoSizeTextType
 attr autoTransition
 attr background
 attr backgroundColor
+attr backgroundImage
 attr backgroundInsetBottom
 attr backgroundInsetEnd
 attr backgroundInsetStart
@@ -393,6 +403,9 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr fadeDuration
+attr failureImage
+attr failureImageScaleType
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -675,6 +688,7 @@ attr onShow
 attr onTouchUp
 attr overlapAnchor
 attr overlay
+attr overlayImage
 attr paddingBottomNoButtons
 attr paddingBottomSystemWindowInsets
 attr paddingEnd
@@ -698,6 +712,8 @@ attr percentX
 attr percentY
 attr perpendicularPath_percent
 attr pivotAnchor
+attr placeholderImage
+attr placeholderImageScaleType
 attr placeholderText
 attr placeholderTextAppearance
 attr placeholderTextColor
@@ -710,7 +726,11 @@ attr prefixText
 attr prefixTextAppearance
 attr prefixTextColor
 attr preserveIconSpacing
+attr pressedStateOverlayImage
 attr pressedTranslationZ
+attr progressBarAutoRotateInterval
+attr progressBarImage
+attr progressBarImageScaleType
 attr progressBarPadding
 attr progressBarStyle
 attr queryBackground
@@ -725,10 +745,26 @@ attr region_heightLessThan
 attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
+attr retryImage
+attr retryImageScaleType
 attr reverseLayout
 attr rippleColor
 attr round
+attr roundAsCircle
+attr roundBottomEnd
+attr roundBottomLeft
+attr roundBottomRight
+attr roundBottomStart
 attr roundPercent
+attr roundTopEnd
+attr roundTopLeft
+attr roundTopRight
+attr roundTopStart
+attr roundWithOverlayColor
+attr roundedCornerRadius
+attr roundingBorderColor
+attr roundingBorderPadding
+attr roundingBorderWidth
 attr saturation
 attr scopeUris
 attr scrimAnimationDuration
@@ -927,6 +963,7 @@ attr useCompatPadding
 attr useMaterialThemeColors
 attr values
 attr verticalOffset
+attr viewAspectRatio
 attr viewInflaterClass
 attr visibilityMode
 attr voiceIcon
@@ -998,6 +1035,7 @@ color cardview_dark_background
 color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
+color catalyst_redbox_background
 color checkbox_themeable_attribute_color
 color colorAccent
 color colorBackground
@@ -1156,6 +1194,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1571,6 +1610,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1717,6 +1760,11 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_reject
 drawable ic_video
+drawable images_avatar
+drawable images_btn_google_signin_dark_normal
+drawable images_dropboxlogo_square
+drawable images_iconusers
+drawable images_jitsilogo_square
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1750,6 +1798,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable redbox_top_border_background
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1769,6 +1818,7 @@ id TOP_END
 id TOP_START
 id accelerate
 id accessibility_action_clickable_span
+id accessibility_actions
 id accessibility_custom_action_0
 id accessibility_custom_action_1
 id accessibility_custom_action_10
@@ -1801,6 +1851,12 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accessibility_hint
+id accessibility_label
+id accessibility_role
+id accessibility_state
+id accessibility_states
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1845,9 +1901,13 @@ id bounce
 id btnSignIn
 id buttonPanel
 id cache_measures
+id cancel_action
 id cancel_button
 id card_is
+id catalyst_redbox_title
 id center
+id centerCrop
+id centerInside
 id center_horizontal
 id center_vertical
 id chain
@@ -1912,6 +1972,7 @@ id edit_query
 id elastic
 id end
 id endToStart
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -1922,11 +1983,18 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id fitBottomStart
+id fitCenter
+id fitEnd
+id fitStart
 id fitToContents
+id fitXY
 id fixed
 id flip
 id floating
+id focusCrop
 id forever
+id fps_text
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -1963,6 +2031,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id jitsiFragment
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -1998,6 +2067,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id media_actions
 id message
 id middle
 id mini
@@ -2062,12 +2132,22 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id react_test_id
 id rectangles
 id reverseSawtooth
 id right
 id rightToLeft
 id right_icon
 id right_side
+id rn_frame_file
+id rn_frame_method
+id rn_redbox_dismiss_button
+id rn_redbox_line_separator
+id rn_redbox_loading_indicator
+id rn_redbox_reload_button
+id rn_redbox_report_button
+id rn_redbox_report_label
+id rn_redbox_stack
 id rounded
 id row_index_key
 id save_non_transition_alpha
@@ -2123,6 +2203,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
@@ -2198,6 +2279,8 @@ id usersRecyclerView
 id viewDivider
 id viewSupporter
 id view_offset_helper
+id view_tag_instance_handle
+id view_tag_native_id
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
@@ -2230,6 +2313,8 @@ integer mtrl_card_anim_delay_ms
 integer mtrl_card_anim_duration_ms
 integer mtrl_chip_anim_duration
 integer mtrl_tab_indicator_anim_duration_ms
+integer react_native_dev_server_port
+integer react_native_inspector_proxy_port
 integer show_password_duration
 integer status_bar_notification_info_maxnum
 interpolator btn_checkbox_checked_mtrl_animation_interpolator_0
@@ -2274,6 +2359,7 @@ layout abc_tooltip
 layout activity_contacta
 layout activity_incoming_invitation
 layout activity_iniciar_sesion
+layout activity_jitsi_meet
 layout activity_main
 layout activity_outgoing_invitation
 layout custom_dialog
@@ -2292,6 +2378,8 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dev_loading_view
+layout fps_view
 layout item_container_user
 layout material_chip_input_combo
 layout material_clock_display
@@ -2337,10 +2425,22 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout redbox_item_frame
+layout redbox_item_title
+layout redbox_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2362,6 +2462,66 @@ layout text_view_without_line_height
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw lang_languages
+raw lang_languagesaf
+raw lang_languagesbg
+raw lang_languagesca
+raw lang_languagesde
+raw lang_languagesengb
+raw lang_languageseo
+raw lang_languageses
+raw lang_languagesesus
+raw lang_languageset
+raw lang_languagesfi
+raw lang_languagesfr
+raw lang_languagesfrca
+raw lang_languageshr
+raw lang_languageshu
+raw lang_languagesit
+raw lang_languagesja
+raw lang_languagesko
+raw lang_languagesmn
+raw lang_languagesnl
+raw lang_languagesoc
+raw lang_languagespl
+raw lang_languagesptbr
+raw lang_languagesru
+raw lang_languagessk
+raw lang_languagessv
+raw lang_languagesvi
+raw lang_languageszhcn
+raw lang_languageszhtw
+raw lang_main
+raw lang_mainaf
+raw lang_mainbg
+raw lang_mainca
+raw lang_mainde
+raw lang_mainengb
+raw lang_maineo
+raw lang_maines
+raw lang_mainesus
+raw lang_mainet
+raw lang_mainfi
+raw lang_mainfr
+raw lang_mainfrca
+raw lang_mainhr
+raw lang_mainhu
+raw lang_mainit
+raw lang_mainja
+raw lang_mainko
+raw lang_mainmn
+raw lang_mainnl
+raw lang_mainoc
+raw lang_mainpl
+raw lang_mainptbr
+raw lang_mainru
+raw lang_mainsk
+raw lang_mainsv
+raw lang_mainvi
+raw lang_mainzhcn
+raw lang_mainzhtw
+raw node_modules_i18nisocountries_langs_en
+raw node_modules_reactnative_package
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2389,15 +2549,45 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string alert_description
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string catalyst_change_bundle_location
+string catalyst_copy_button
+string catalyst_debug
+string catalyst_debug_chrome
+string catalyst_debug_chrome_stop
+string catalyst_debug_connecting
+string catalyst_debug_error
+string catalyst_debug_nuclide
+string catalyst_debug_nuclide_error
+string catalyst_debug_stop
+string catalyst_dismiss_button
+string catalyst_heap_capture
+string catalyst_hot_reloading
+string catalyst_hot_reloading_auto_disable
+string catalyst_hot_reloading_auto_enable
+string catalyst_hot_reloading_stop
+string catalyst_inspector
+string catalyst_loading_from_url
+string catalyst_perf_monitor
+string catalyst_perf_monitor_stop
+string catalyst_reload
+string catalyst_reload_button
+string catalyst_reload_error
+string catalyst_report_button
+string catalyst_sample_profiler_disable
+string catalyst_sample_profiler_enable
+string catalyst_settings
+string catalyst_settings_title
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string combobox_description
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -2417,6 +2607,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+string dropbox_app_key
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2427,9 +2618,13 @@ string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string header_description
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string image_description
+string imagebutton_description
 string item_view_role_description
+string link_description
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2445,6 +2640,9 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string menu_description
+string menubar_description
+string menuitem_description
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2480,22 +2678,42 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string ongoing_notification_text
+string ongoing_notification_title
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string progressbar_description
 string project_id
+string radiogroup_description
+string rn_tab_description
+string scrollbar_description
+string search_description
 string search_menu_title
+string spinbutton_description
+string state_busy_description
+string state_collapsed_description
+string state_expanded_description
+string state_mixed_description
+string state_off_description
+string state_on_description
 string status_bar_notification_info_overflow
+string summary_description
+string tablist_description
+string timer_description
+string toolbar_description
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
+style Animation_Catalyst_RedBox
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -2714,9 +2932,15 @@ style Base_Widget_MaterialComponents_Snackbar
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style CalendarDatePickerDialog
+style CalendarDatePickerStyle
 style CardView
 style CardView_Dark
 style CardView_Light
+style ClockTimePickerDialog
+style ClockTimePickerStyle
+style DialogAnimationFade
+style DialogAnimationSlide
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -2780,6 +3004,10 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SpinnerDatePickerDialog
+style SpinnerDatePickerStyle
+style SpinnerTimePickerDialog
+style SpinnerTimePickerStyle
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -2841,9 +3069,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
@@ -2875,6 +3108,7 @@ style TextAppearance_MaterialComponents_Tooltip
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style Theme
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -2897,12 +3131,17 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style Theme_Catalyst
+style Theme_Catalyst_RedBox
 style Theme_Design
 style Theme_Design_BottomSheetDialog
 style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_FullScreenDialog
+style Theme_FullScreenDialogAnimatedFade
+style Theme_FullScreenDialogAnimatedSlide
 style Theme_MaterialComponents
 style Theme_MaterialComponents_BottomSheetDialog
 style Theme_MaterialComponents_Bridge
@@ -2952,6 +3191,8 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_ReactNative_AppCompat_Light
+style Theme_ReactNative_AppCompat_Light_NoActionBar_FullScreen
 style Theme_VideoMeeting
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
@@ -3204,6 +3445,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style redboxButton
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -3256,6 +3498,7 @@ styleable FontFamilyFont android_font android_fontWeight android_fontStyle andro
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
+styleable GenericDraweeHierarchy actualImageScaleType backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth
@@ -3314,6 +3557,7 @@ styleable SearchView android_focusable android_maxWidth android_inputType androi
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable SignInButton buttonSize colorScheme scopeUris
+styleable SimpleDraweeView actualImageResource actualImageScaleType actualImageUri backgroundImage fadeDuration failureImage failureImageScaleType overlayImage placeholderImage placeholderImageScaleType pressedStateOverlayImage progressBarAutoRotateInterval progressBarImage progressBarImageScaleType retryImage retryImageScaleType roundAsCircle roundBottomEnd roundBottomLeft roundBottomRight roundBottomStart roundTopEnd roundTopLeft roundTopRight roundTopStart roundWithOverlayColor roundedCornerRadius roundingBorderColor roundingBorderPadding roundingBorderWidth viewAspectRatio
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
@@ -3340,6 +3584,8 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_provider_paths
+xml rn_dev_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start
