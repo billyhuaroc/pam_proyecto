@@ -13,12 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
 
-import org.jetbrains.annotations.NotNull;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 import org.json.JSONArray;
@@ -43,7 +39,8 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
     private PreferenceManager preferenceManager;
     //y el token del remitente
     private String inviterToken = null;
-    String meetingRoom = null;
+    private String meetingRoom = null;
+    private String meetingType = null;
 
 
     @Override
@@ -56,7 +53,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
 
         ImageView imageMeetingType = findViewById(R.id.imageMeetingType);
         //copiamos el nombre de la pagina principal
-        String meetingType = getIntent().getStringExtra("type");
+        meetingType = getIntent().getStringExtra("type");
 
         //comprobamos que el tipo de reunion no es nulo
         if (meetingType != null) {
@@ -64,6 +61,8 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             if(meetingType.equals("video")){
                 //si es video configuramos el icono de video de imagen
                 imageMeetingType.setImageResource(R.drawable.ic_video);
+            }else {
+                imageMeetingType.setImageResource(R.drawable.ic_audio);
             }
         }
         //ahora definimos los detalles del usuario como el nombre y letra
@@ -195,20 +194,22 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
                 if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
                     try {
                         URL serverUrl = new URL("https://meet.jit.si");
-                        JitsiMeetConferenceOptions conferenceOptions =
-                                new JitsiMeetConferenceOptions.Builder()
-                                        .setServerURL(serverUrl)
-                                        .setWelcomePageEnabled(false)
-                                        .setRoom(meetingRoom)
-                                        .build();
-                        JitsiMeetActivity.launch(OutgoingInvitationActivity.this,conferenceOptions);
+
+                        JitsiMeetConferenceOptions.Builder builder =
+                                new JitsiMeetConferenceOptions.Builder();
+                        builder.setServerURL(serverUrl);
+                        builder.setWelcomePageEnabled(false);
+                        builder.setRoom(meetingRoom);
+                        if (meetingType.equals("audio")){
+                            builder.setVideoMuted(true);
+                        }
+                        JitsiMeetActivity.launch(OutgoingInvitationActivity.this,builder.build());
                         finish();
                     }catch (Exception e){
                         Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
                         finish();
                     }
-                    //Toast.makeText(context, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
-                }else if (type.equals(Constants.REMOTE_MSG_INVITATION_REJECTED)){
+                } else if (type.equals(Constants.REMOTE_MSG_INVITATION_REJECTED)){
                     Toast.makeText(context, "Invitacion rechazada", Toast.LENGTH_SHORT).show();
                     finish();
                 }

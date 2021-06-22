@@ -171,7 +171,11 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
         if(usuario.token == null  || usuario.token.trim().isEmpty()){
             Toast.makeText(this, ""+usuario.nombre + "no habilitado para audio", Toast.LENGTH_SHORT).show();
         }else {
-            Toast.makeText(this, "Audio reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Audio reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(getApplicationContext(),OutgoingInvitationActivity.class);
+            intent.putExtra("usuario",usuario);
+            intent.putExtra("type","audio");
+            startActivity(intent);
         }
     }
 }
