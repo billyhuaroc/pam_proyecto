@@ -106,6 +106,7 @@ public class IncomingInvitationActivity extends AppCompatActivity {
             sendRemoteMessage(body.toString(),type);
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            finish();
         }
     }
 
@@ -160,9 +161,11 @@ public class IncomingInvitationActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             String type = intent.getStringExtra(Constants.REMOTE_MSG_INVITATION_RESPONSE);
-            if (type.equals(Constants.REMOTE_MSG_INVITATION_CANCELLED)){
-                Toast.makeText(context, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
-                finish();
+            if (type!=null){
+                if (type.equals(Constants.REMOTE_MSG_INVITATION_CANCELLED)) {
+                    Toast.makeText(context, "Invitacion cancelada", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         }
     };
