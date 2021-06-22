@@ -60,4 +60,7 @@ dependencies {
     //implementation 'com.google.firebase:firebase-messaging:22.0.0'
     implementation "com.google.firebase:firebase-messaging:$firebase_version"
     implementation 'com.google.firebase:firebase-firestore:23.0.1'
+
+    //Jitsi Meet
+    implementation ('org.jitsi.react:jitsi-meet-sdk:2.8.2') { transitive = true }
 }
