@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        preferenceManager=new PreferenceManager(getApplicationContext());
+        preferenceManager = new PreferenceManager(getApplicationContext());
 
         TextView textTittle = findViewById(R.id.textTittle);
         textTittle.setText(String.format(
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
 
         FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
             @Override
-            public void onComplete(@NonNull @NotNull Task<InstanceIdResult> task) {
+            public void onComplete(@NonNull Task<InstanceIdResult> task) {
                 if(task.isSuccessful() && task.getResult()!=null) {
                     sendFCMTokenToDataBase(task.getResult().getToken());
                 }
@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
         updates.put(Constants.KEY_FCM_TOKEN, FieldValue.delete());
         documentReference.update(updates)
                 .addOnSuccessListener(unused -> {
+                    preferenceManager.clearPreference();
                     startActivity(new Intent(getApplicationContext(),IniciarSesion.class));
                     finish();
                 })

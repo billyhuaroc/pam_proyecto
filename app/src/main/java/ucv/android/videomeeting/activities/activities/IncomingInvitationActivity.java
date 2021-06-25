@@ -94,10 +94,10 @@ public class IncomingInvitationActivity extends AppCompatActivity {
         });
     }
 
-    private void sendInvitationResponse(String type, String recibeToken){
+    private void sendInvitationResponse(String type, String receiverToken){
         try {
             JSONArray tokens = new JSONArray();
-            tokens.put(recibeToken);
+            tokens.put(receiverToken);
 
             JSONObject body = new JSONObject();
             JSONObject data = new JSONObject();
@@ -109,6 +109,7 @@ public class IncomingInvitationActivity extends AppCompatActivity {
             body.put(Constants.REMOTE_MSG_REGISTRATION_IDS,tokens);
 
             sendRemoteMessage(body.toString(),type);
+
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             finish();
@@ -125,6 +126,7 @@ public class IncomingInvitationActivity extends AppCompatActivity {
                 //respuesta
                 if (response.isSuccessful()){
                     if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
+                        //Toast.makeText(IncomingInvitationActivity.this, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
                         try {
                             URL serverUrl = new URL("https://meet.jit.si");
                             JitsiMeetConferenceOptions.Builder builder =
@@ -142,19 +144,17 @@ public class IncomingInvitationActivity extends AppCompatActivity {
                             Toast.makeText(IncomingInvitationActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                             finish();
                         }
-                        //Toast.makeText(IncomingInvitationActivity.this, "Invitacion aceptada", Toast.LENGTH_SHORT    ).show();
                     }
                     else{
-                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion rechazada", Toast.LENGTH_SHORT    ).show();
-                        finish();
+                        Toast.makeText(IncomingInvitationActivity.this, "Invitacion rechazada", Toast.LENGTH_SHORT).show();
                     }
                     /*if (type.equals(Constants.REMOTE_MSG_INVITATION)){
                         Toast.makeText(IncomingInvitationActivity.this, "Invitacion enviada", Toast.LENGTH_SHORT    ).show();
                     }*/
                 }else{
                     Toast.makeText(IncomingInvitationActivity.this, response.message(), Toast.LENGTH_SHORT).show();
-                    finish();
                 }
+                finish();
             }
 
             @Override

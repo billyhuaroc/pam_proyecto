@@ -13,8 +13,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
+import org.jetbrains.annotations.NotNull;
 import org.jitsi.meet.sdk.JitsiMeetActivity;
 import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 import org.json.JSONArray;
@@ -48,23 +52,6 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_outgoing_invitation);
 
-        //ahora inicializar ambas
-        preferenceManager = new PreferenceManager(getApplicationContext());
-
-        ImageView imageMeetingType = findViewById(R.id.imageMeetingType);
-        //copiamos el nombre de la pagina principal
-        meetingType = getIntent().getStringExtra("type");
-
-        //comprobamos que el tipo de reunion no es nulo
-        if (meetingType != null) {
-            //verificamos si es audio o video
-            if(meetingType.equals("video")){
-                //si es video configuramos el icono de video de imagen
-                imageMeetingType.setImageResource(R.drawable.ic_video);
-            }else {
-                imageMeetingType.setImageResource(R.drawable.ic_audio);
-            }
-        }
         //ahora definimos los detalles del usuario como el nombre y letra
         TextView textFirstChar = findViewById(R.id.textFirstChar);
         TextView textUsername = findViewById(R.id.textUsername);
@@ -89,16 +76,41 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             }
         });
 
+        //ahora inicializar ambas
+        preferenceManager = new PreferenceManager(getApplicationContext());
         //usaremos firebase y le pasaremos el oyente
-        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(task -> {
-            if(task.isSuccessful() && task.getResult()!=null) {
-                inviterToken = task.getResult().getId();
-                if (meetingType!=null || usuario!=null){
-                    //llamamos a iniciar reunion y el primer parametro es el tipo
-                    initiateMeeting(meetingType,usuario.token); //no se si se vaya a pasar esto
+        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+            @Override
+            public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                if(task.isSuccessful() && task.getResult()!=null) {
+                    inviterToken = task.getResult().getToken();
+                    if (meetingType!=null && usuario!=null){
+                        //llamamos a iniciar reunion y el primer parametro es el tipo
+                        initiateMeeting(meetingType,usuario.token); //no se si se vaya a pasar esto
+                    }
                 }
             }
         });
+
+
+        ImageView imageMeetingType = findViewById(R.id.imageMeetingType);
+        //copiamos el nombre de la pagina principal
+        meetingType = getIntent().getStringExtra("type");
+
+        //comprobamos que el tipo de reunion no es nulo
+        if (meetingType != null) {
+            //verificamos si es audio o video
+            if(meetingType.equals("video")){
+                //si es video configuramos el icono de video de imagen
+                imageMeetingType.setImageResource(R.drawable.ic_video);
+            }else {
+                imageMeetingType.setImageResource(R.drawable.ic_audio);
+            }
+        }
+
+
+
+
     }
 
     // metodo para iniciar la reunion
@@ -154,7 +166,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
                     }
                 }else{
                     Toast.makeText(OutgoingInvitationActivity.this, response.message(), Toast.LENGTH_SHORT).show();
-                    finish();
+                    //finish();
                 }
             }
 
@@ -180,6 +192,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             body.put(Constants.REMOTE_MSG_REGISTRATION_IDS,tokens);
 
             sendRemoteMessage(body.toString(),Constants.REMOTE_MSG_INVITATION_RESPONSE);
+
         }catch (Exception e){
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             finish();
@@ -192,6 +205,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             String type = intent.getStringExtra(Constants.REMOTE_MSG_INVITATION_RESPONSE);
             if (type!=null){
                 if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
+                    //Toast.makeText(context, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
                     try {
                         URL serverUrl = new URL("https://meet.jit.si");
 
