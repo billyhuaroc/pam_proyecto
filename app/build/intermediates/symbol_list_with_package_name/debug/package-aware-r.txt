@@ -1903,7 +1903,6 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
-id card_is
 id catalyst_redbox_title
 id center
 id centerCrop
