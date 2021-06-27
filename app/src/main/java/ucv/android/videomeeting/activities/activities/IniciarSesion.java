@@ -20,41 +20,55 @@ import ucv.android.videomeeting.activities.utilities.PreferenceManager;
 
 public class IniciarSesion extends AppCompatActivity {
 
-    private EditText inputEmail, inputContraseña;
-    private MaterialButton btnSignIn;
-    private ProgressBar signInProgressBar;
-    private PreferenceManager preferenceManager;
+    private EditText inputEmail, inputContraseña; //SI LO CONOCEMOS
+    private MaterialButton btnSignIn; //LO VOY A QUITAR Y LE VOY A PONER Button
+    private ProgressBar signInProgressBar; //esto lo TENEMOS
+    private PreferenceManager preferenceManager;  //no se sabe de donde o que libreria sale
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_iniciar_sesion);
+        setContentView(R.layout.activity_iniciar_sesion); //LAYOUT QUE VA
 
-        findViewById(R.id.contacta_aqui).setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ContactaActivity.class)));
+
+        findViewById(R.id.contacta_aqui).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),ContactaActivity.class);
+                startActivity(intent);
+            }
+        });
+        //------------------------------------------------------------1RA PARTE
 
         preferenceManager = new PreferenceManager(getApplicationContext());
-        signInProgressBar = findViewById(R.id.signInProgressBar);
+        signInProgressBar = findViewById(R.id.signInProgressBar); //casteeaa CASTEAAAA -->>>
 
-        inputEmail = findViewById(R.id.inputEmail);
+        inputCorreo = findViewById(R.id.inputEmail);
         inputContraseña = findViewById(R.id.inputContraseña);
-        btnSignIn = findViewById(R.id.btnSignIn);
+        btnIniciarSesion = findViewById(R.id.btnSignIn);
+
+        //------
 
         btnSignIn.setOnClickListener(view -> {
             if (inputEmail.getText().toString().trim().isEmpty()) {
                 Toast.makeText(IniciarSesion.this, "Falta el email", Toast.LENGTH_SHORT).show();
-            } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.getText().toString()).matches()) {
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(inputEmail.getText().toString()).matches()) { //quiza haya varianteS
                 Toast.makeText(IniciarSesion.this, "Falta validar email", Toast.LENGTH_SHORT).show();
             } else if (inputContraseña.getText().toString().trim().isEmpty()) {
                 Toast.makeText(IniciarSesion.this, "Falta contraseña", Toast.LENGTH_SHORT).show();
             } else {
-                signIn();
+                ingresarSesion();
             }
         });
     }
 
     private void signIn() {
-        btnSignIn.setVisibility(View.INVISIBLE);
-        signInProgressBar.setVisibility(View.VISIBLE);
+        btnIniciarSesion.setVisibility(View.INVISIBLE); // SE DEBE USARRR
+        progresoIniciarSesion.setVisibility(View.VISIBLE);
+
+        //----------------hasta aca NUESTRA PROPIEDAD
+
+        //-----------adap´taARRRRRRRRRRRRRRRRRRRRR-
 
         FirebaseFirestore database = FirebaseFirestore.getInstance();
         database.collection(Constants.KEY_COLLECION_USERS)
@@ -74,10 +88,12 @@ public class IniciarSesion extends AppCompatActivity {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
 
+                        //---------HASTA AQUIIIIIIIIIIIIIIIIIIIIIIIIIII-//
+
                     }else {
                         signInProgressBar.setVisibility(View.INVISIBLE);
                         btnSignIn.setVisibility(View.VISIBLE);
-                        Toast.makeText(IniciarSesion.this,"Incapaz de acceder",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(IniciarSesion.this,"DATOS INCORRECTOS",Toast.LENGTH_SHORT).show();
                     }
                 });
     }

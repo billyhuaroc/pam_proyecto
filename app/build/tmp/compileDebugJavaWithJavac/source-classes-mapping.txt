@@ -17,17 +17,18 @@ ucv/android/videomeeting/BuildConfig.java
  ucv.android.videomeeting.BuildConfig
 ucv/android/videomeeting/activities/utilities/PreferenceManager.java
  ucv.android.videomeeting.activities.utilities.PreferenceManager
+ucv/android/videomeeting/activities/activities/IniciarSesion.java
+ ucv.android.videomeeting.activities.activities.IniciarSesion
 ucv/android/videomeeting/activities/activities/MainActivity.java
  ucv.android.videomeeting.activities.activities.MainActivity
  ucv.android.videomeeting.activities.activities.MainActivity$1
-ucv/android/videomeeting/activities/activities/IniciarSesion.java
- ucv.android.videomeeting.activities.activities.IniciarSesion
 ucv/android/videomeeting/activities/firebase/MensajeServices.java
  ucv.android.videomeeting.activities.firebase.MensajeServices
 ucv/android/videomeeting/activities/activities/OutgoingInvitationActivity.java
  ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity
  ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$1
  ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$2
+ ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$3
 ucv/android/videomeeting/activities/activities/IncomingInvitationActivity.java
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity$1
