@@ -17,15 +17,20 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:gravity="center"
-            android:background="@color/colorPrimary"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <!--<ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_bg"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"/>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="OFICINA SJL"
+                android:gravity="center"
+                android:textSize="30sp"/>
         </LinearLayout>
 
 
@@ -56,7 +61,11 @@
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="16sp"/>
 
-                <EditText
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
                     android:id="@+id/inputEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,33 +78,52 @@
                     android:hint="usuario@ejemplo.com"
                     android:inputType="textEmailAddress"
                     android:textSize="16sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="28dp"
                     android:layout_marginEnd="8dp"
                     android:textStyle="normal"
                     android:includeFontPadding="false"
                     android:text="Contraseña:"
                     android:textColor="@color/colorPrimaryText"
                     android:textSize="16sp"/>
-
-                <EditText
-                    android:id="@+id/inputContraseña"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:drawableStart="@drawable/ic_https"
-                    android:drawablePadding="10dp"
-                    android:imeOptions="actionNext"
-                    android:hint="\u2022 \u2022 \u2022 \u2022 \u2022 \u2022"
-                    android:inputType="textPassword"
-                    android:textSize="16sp"/>
+                    app:passwordToggleEnabled="true">
+
+                    <EditText
+                        android:id="@+id/inputContraseña"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:drawablePadding="10dp"
+                        android:imeOptions="actionNext"
+                        android:hint="Ingrese su contraseña"
+                        android:inputType="textPassword"
+                        android:textSize="16sp"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/contacta_aqui"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:includeFontPadding="false"
+                    android:padding="6dp"
+                    android:gravity="right"
+                    android:text="¿no tienes acceso?"
+                    android:textAllCaps="true"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvt_cuenta"/>
 
             </LinearLayout>
 
@@ -110,17 +138,18 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSignIn"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
                 android:includeFontPadding="false"
                 android:text="iniciar sesión"
                 android:textColor="@color/colorTextIcons"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint=""
                 app:layout_constraintTop_toBottomOf="@+id/card_is"/>
-            
+
             <ProgressBar
                 android:id="@+id/signInProgressBar"
                 android:layout_marginTop="20dp"
@@ -131,35 +160,6 @@
         </FrameLayout>
 
 
-        <TextView
-            android:id="@+id/tvt_cuenta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:includeFontPadding="false"
-            android:padding="6dp"
-            android:gravity="center"
-            android:text="No tienes acceso"
-            android:textSize="13sp"
-            android:textColor="@color/colorPrimaryText"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/visibleSignIn"/>
-
-        <TextView
-            android:id="@+id/contacta_aqui"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:includeFontPadding="false"
-            android:padding="6dp"
-            android:gravity="center"
-            android:text="contacta aqui"
-            android:textAllCaps="true"
-            android:textSize="14sp"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/tvt_cuenta"/>
-
-        
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
