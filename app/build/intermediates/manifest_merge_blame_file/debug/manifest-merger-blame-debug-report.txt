@@ -76,7 +76,7 @@
 37-->[com.google.firebase:firebase-iid:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\f6340c8c96f1772991c2ce1164c11b0b\firebase-iid-20.2.3\AndroidManifest.xml:26:22-79
 38
 39    <application
-39-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:8:5-41:19
+39-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:8:5-42:19
 40        android:allowBackup="true"
 40-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:9:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -94,28 +94,30 @@
 47-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:14:9-35
 48        android:testOnly="true"
 49        android:theme="@style/Theme.VideoMeeting"
-49-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:16:9-50
+49-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:15:9-50
 50        android:usesCleartextTraffic="true" >
-50-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:15:9-44
-51        <activity
-51-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:9-20:25
-52            android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity"
-52-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:19-83
-53            android:screenOrientation="portrait" />
-53-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:19:13-49
-54        <activity
-54-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:9-22:51
-55            android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity"
-55-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:19-83
-56            android:screenOrientation="portrait" />
-56-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:22:13-49
-57        <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
-57-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:9-76
-57-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:19-73
-58        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" >
-58-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:24:9-26:20
-58-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:24:19-70
-59        </activity>
+50-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:16:9-44
+51        <activity android:name="ucv.android.videomeeting.activities.activities.Prueba" />
+51-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:9-75
+51-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:18:19-63
+52        <activity
+52-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:19:9-21:52
+53            android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity"
+53-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:20:13-77
+54            android:screenOrientation="portrait" />
+54-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:21:13-49
+55        <activity
+55-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:22:9-24:52
+56            android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity"
+56-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:23:13-77
+57            android:screenOrientation="portrait" />
+57-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:24:13-49
+58        <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
+58-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:25:9-76
+58-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:25:19-73
+59        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" />
+59-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:26:9-82
+59-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:26:19-70
 60        <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" >
 60-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:27:9-33:20
 60-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:27:19-69
@@ -132,16 +134,16 @@
 66        </activity>
 67
 68        <service
-68-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:35:9-40:19
+68-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:35:9-41:19
 69            android:name="ucv.android.videomeeting.activities.firebase.MensajeServices"
-69-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:35:18-69
+69-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:36:13-64
 70            android:exported="false" >
-70-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:36:13-37
+70-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:37:13-37
 71            <intent-filter>
-71-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:37:13-39:29
+71-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:13-40:29
 72                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-72-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:17-77
-72-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:25-75
+72-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:39:17-78
+72-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:39:25-75
 73            </intent-filter>
 74        </service>
 75
@@ -211,10 +213,10 @@
 111            android:exported="false" >
 111-->[com.google.firebase:firebase-messaging:20.2.3] C:\Users\PC\.gradle\caches\transforms-2\files-2.1\a56bf5d3726a15d8278b32ae0983561f\firebase-messaging-20.2.3\AndroidManifest.xml:31:13-37
 112            <intent-filter android:priority="-500" >
-112-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:37:13-39:29
+112-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:13-40:29
 113                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-113-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:17-77
-113-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:38:25-75
+113-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:39:17-78
+113-->C:\Users\PC\Desktop\pam_proyecto\app\src\main\AndroidManifest.xml:39:25-75
 114            </intent-filter>
 115        </service>
 116        <service

@@ -32,7 +32,7 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
     public UserViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         return new UserViewHolder(
                 LayoutInflater.from(parent.getContext()).inflate(
-                        R.layout.item_container_user,
+                        R.layout.sala_item,
                         parent,
                         false
                 )
@@ -51,23 +51,31 @@ public class UserAdapter extends  RecyclerView.Adapter<UserAdapter.UserViewHolde
 
     class UserViewHolder extends RecyclerView.ViewHolder{//es clase para poder acceder al oyente
 
-        TextView textFirstChar, textUsername, textEmail;
-        ImageView imageAudioMeeting, imageVideoMeeting;
+        ImageView salaTipo;
+        //TextView textFirstChar, textUsername, textEmail;
+        //ImageView imageAudioMeeting, imageVideoMeeting;
 
         UserViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            textFirstChar = itemView.findViewById(R.id.textFirstChar);
+            salaTipo = itemView.findViewById(R.id.salaTipo);
+            /*textFirstChar = itemView.findViewById(R.id.textFirstChar);
             textUsername = itemView.findViewById(R.id.textUsername);
             textEmail = itemView.findViewById(R.id.textEmail);
             imageAudioMeeting = itemView.findViewById(R.id.imageAudioMeeting);
-            imageVideoMeeting = itemView.findViewById(R.id.imageVideoMeeting);
+            imageVideoMeeting = itemView.findViewById(R.id.imageVideoMeeting);*/
         }
         void setUserData(Usuario usuario){
-            textFirstChar.setText(usuario.nombre.substring(0, 1));
+            salaTipo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    usersListener.initiateVideoMeeting(usuario);
+                }
+            });
+            /*textFirstChar.setText(usuario.nombre.substring(0, 1));
             textUsername.setText(String.format("%s %s", usuario.nombre,usuario.cargo));
             textEmail.setText(usuario.email);
             imageVideoMeeting.setOnClickListener(v -> usersListener.initiateVideoMeeting(usuario));
-            imageAudioMeeting.setOnClickListener(v -> usersListener.initiateAudioMeeting(usuario));
+            imageAudioMeeting.setOnClickListener(v -> usersListener.initiateAudioMeeting(usuario));*/
         }
     }
 }//nuestra clase adaptader esta lista

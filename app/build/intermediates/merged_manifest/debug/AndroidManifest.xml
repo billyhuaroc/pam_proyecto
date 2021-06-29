@@ -48,6 +48,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.VideoMeeting"
         android:usesCleartextTraffic="true" >
+        <activity android:name="ucv.android.videomeeting.activities.activities.Prueba" />
         <activity
             android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity"
             android:screenOrientation="portrait" />
@@ -55,8 +56,7 @@
             android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity"
             android:screenOrientation="portrait" />
         <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
-        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" >
-        </activity>
+        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" />
         <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

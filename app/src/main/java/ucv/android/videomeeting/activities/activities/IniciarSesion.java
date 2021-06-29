@@ -43,9 +43,9 @@ public class IniciarSesion extends AppCompatActivity {
         preferenceManager = new PreferenceManager(getApplicationContext());
         signInProgressBar = findViewById(R.id.signInProgressBar); //casteeaa CASTEAAAA -->>>
 
-        inputCorreo = findViewById(R.id.inputEmail);
+        inputEmail = findViewById(R.id.inputEmail);
         inputContraseña = findViewById(R.id.inputContraseña);
-        btnIniciarSesion = findViewById(R.id.btnSignIn);
+        btnSignIn = findViewById(R.id.btnSignIn);
 
         //------
 
@@ -57,14 +57,14 @@ public class IniciarSesion extends AppCompatActivity {
             } else if (inputContraseña.getText().toString().trim().isEmpty()) {
                 Toast.makeText(IniciarSesion.this, "Falta contraseña", Toast.LENGTH_SHORT).show();
             } else {
-                ingresarSesion();
+                signIn();
             }
         });
     }
 
     private void signIn() {
-        btnIniciarSesion.setVisibility(View.INVISIBLE); // SE DEBE USARRR
-        progresoIniciarSesion.setVisibility(View.VISIBLE);
+        btnSignIn.setVisibility(View.INVISIBLE); // SE DEBE USARRR
+        signInProgressBar.setVisibility(View.VISIBLE);
 
         //----------------hasta aca NUESTRA PROPIEDAD
 

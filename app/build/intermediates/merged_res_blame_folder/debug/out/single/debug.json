@@ -24,6 +24,10 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\item_container_user.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sala_juegos.jpg.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\sala_juegos.jpg"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_meeting_invitation.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_meeting_invitation.xml"
     },
@@ -76,6 +80,10 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\movile.jpg"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_prueba.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\activity_prueba.xml"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_video.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_video.xml"
     },
@@ -88,12 +96,20 @@
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\background_meeting_invitation_user_icon.xml"
     },
     {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sala_trabajo.jpg.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\sala_trabajo.jpg"
+    },
+    {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_https.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_https.xml"
     },
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_accept.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_accept.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\layout_sala_item.xml.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\layout\\sala_item.xml"
     },
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.xml.flat",
@@ -114,6 +130,10 @@
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sala_espera.jpg.flat",
+        "source": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\src\\main\\res\\drawable\\sala_espera.jpg"
     },
     {
         "merged": "C:\\Users\\PC\\Desktop\\pam_proyecto\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
