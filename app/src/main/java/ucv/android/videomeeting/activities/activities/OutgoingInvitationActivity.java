@@ -139,7 +139,7 @@ public class OutgoingInvitationActivity extends AppCompatActivity {
             body.put(Constants.REMOTE_MSG_REGISTRATION_IDS,tokens);
 
             //preparamos la api para enviar los paremetros
-            sendRemoteMessage(body.toString(),Constants.REMOTE_MSG_INVITATION);
+            //sendRemoteMessage(body.toString(),Constants.REMOTE_MSG_INVITATION);
 
         }catch (Exception exception){
             Toast.makeText(this, exception.getMessage(), Toast.LENGTH_LONG).show();

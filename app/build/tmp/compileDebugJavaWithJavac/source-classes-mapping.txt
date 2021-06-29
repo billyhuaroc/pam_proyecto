@@ -14,28 +14,30 @@ ucv/android/videomeeting/activities/network/ApiServices.java
  ucv.android.videomeeting.activities.network.ApiServices
 ucv/android/videomeeting/activities/firebase/MensajeServices.java
  ucv.android.videomeeting.activities.firebase.MensajeServices
-ucv/android/videomeeting/activities/activities/MainActivity.java
- ucv.android.videomeeting.activities.activities.MainActivity
- ucv.android.videomeeting.activities.activities.MainActivity$1
-ucv/android/videomeeting/activities/activities/IniciarSesion.java
- ucv.android.videomeeting.activities.activities.IniciarSesion
- ucv.android.videomeeting.activities.activities.IniciarSesion$1
+ucv/android/videomeeting/activities/activities/ContactaActivity.java
+ ucv.android.videomeeting.activities.activities.ContactaActivity
+ucv/android/videomeeting/activities/activities/Prueba.java
+ ucv.android.videomeeting.activities.activities.Prueba
 ucv/android/videomeeting/activities/adapters/UserAdapter.java
  ucv.android.videomeeting.activities.adapters.UserAdapter
  ucv.android.videomeeting.activities.adapters.UserAdapter$UserViewHolder
  ucv.android.videomeeting.activities.adapters.UserAdapter$UserViewHolder$1
-ucv/android/videomeeting/activities/activities/OutgoingInvitationActivity.java
- ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity
- ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$1
- ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$2
- ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$3
 ucv/android/videomeeting/activities/activities/IncomingInvitationActivity.java
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity$1
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity$2
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity$3
  ucv.android.videomeeting.activities.activities.IncomingInvitationActivity$4
-ucv/android/videomeeting/activities/activities/Prueba.java
- ucv.android.videomeeting.activities.activities.Prueba
-ucv/android/videomeeting/activities/activities/ContactaActivity.java
- ucv.android.videomeeting.activities.activities.ContactaActivity
+ucv/android/videomeeting/activities/activities/OutgoingInvitationActivity.java
+ ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity
+ ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$1
+ ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$2
+ ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity$3
+ucv/android/videomeeting/activities/activities/MainActivity.java
+ ucv.android.videomeeting.activities.activities.MainActivity
+ ucv.android.videomeeting.activities.activities.MainActivity$1
+ ucv.android.videomeeting.activities.activities.MainActivity$2
+ ucv.android.videomeeting.activities.activities.MainActivity$3
+ucv/android/videomeeting/activities/activities/IniciarSesion.java
+ ucv.android.videomeeting.activities.activities.IniciarSesion
+ ucv.android.videomeeting.activities.activities.IniciarSesion$1

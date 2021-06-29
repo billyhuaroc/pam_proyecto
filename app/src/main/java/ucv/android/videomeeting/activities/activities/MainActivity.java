@@ -2,10 +2,14 @@ package ucv.android.videomeeting.activities.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -23,15 +27,23 @@ import com.google.firebase.iid.InstanceIdResult;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.jetbrains.annotations.NotNull;
+import org.jitsi.meet.sdk.JitsiMeetActivity;
+import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import ucv.android.videomeeting.R;
 import ucv.android.videomeeting.activities.adapters.UserAdapter;
 import ucv.android.videomeeting.activities.listeners.UsersListener;
 import ucv.android.videomeeting.activities.models.Usuario;
+import ucv.android.videomeeting.activities.network.ApiClient;
+import ucv.android.videomeeting.activities.network.ApiServices;
 import ucv.android.videomeeting.activities.utilities.Constants;
 import ucv.android.videomeeting.activities.utilities.PreferenceManager;
 
@@ -52,9 +64,8 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
 
         TextView textTittle = findViewById(R.id.textTittle);
         textTittle.setText(String.format(
-            "%s %s",
-            preferenceManager.getString(Constants.KEY_NOMBRE),
-            preferenceManager.getString(Constants.KEY_CARGO)
+            "%s",
+            preferenceManager.getString(Constants.KEY_NOMBRE)
         ));
 
         findViewById(R.id.textSignOut).setOnClickListener(v -> SingOut());
@@ -102,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
                             Usuario usuario = new Usuario();
                             usuario.nombre = documentSnapshot.getString(Constants.KEY_NOMBRE);
                             usuario.cargo = documentSnapshot.getString(Constants.KEY_CARGO);
-                            usuario.email = documentSnapshot.getString(Constants.KEY_EMAIL);
+                            //usuario.email = documentSnapshot.getString(Constants.KEY_EMAIL);
                             usuario.token = documentSnapshot.getString(Constants.KEY_FCM_TOKEN);
                             usuarios.add(usuario);
                         }
@@ -158,12 +169,13 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
             Toast.makeText(this, ""+usuario.nombre + "no habilitado para audio", Toast.LENGTH_SHORT).show();
         }else {
             //Toast.makeText(this, "Video reunion con "+usuario.nombre+ " de "+  usuario.cargo, Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getApplicationContext(),OutgoingInvitationActivity.class);
+            //Intent intent = new Intent(getApplicationContext(),OutgoingInvitationActivity.class);
             // pasamos el objeto directamente con la intencion que se debe a que la clase usuario
             //implementa la interfaz serializable
-            intent.putExtra("usuario",usuario);
+            /*intent.putExtra("usuario",usuario);
             intent.putExtra("type","video");
-            startActivity(intent);
+            startActivity(intent);*/
+            Toast.makeText(this, "Ok", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -178,5 +190,73 @@ public class MainActivity extends AppCompatActivity implements UsersListener {
             intent.putExtra("type","audio");
             startActivity(intent);
         }
+    }
+
+    private void sendRemoteMessage(String remoteMessageBody){
+        //llamada usando la red retrofit
+        ApiClient.getCliente().create(ApiServices.class).sendRemoteMessage(
+                Constants.getRemoteMessageEncabezados(),remoteMessageBody
+        ).enqueue(new Callback<String>() { //nos dara dos devoluciones
+            @Override
+            public void onResponse(@NonNull Call<String> call, @NonNull Response<String> response) {
+                //respuesta
+                if (response.isSuccessful()){
+                    Toast.makeText(MainActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this, response.message(), Toast.LENGTH_SHORT).show();
+                    //finish();
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<String> call, @NonNull Throwable t) {
+                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+    }
+    private BroadcastReceiver invitationResponseReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String type = intent.getStringExtra(Constants.REMOTE_MSG_INVITATION_RESPONSE);
+            if (type!=null){
+                if (type.equals(Constants.REMOTE_MSG_INVITATION_ACCEPTED)){
+                    //Toast.makeText(context, "Invitacion aceptada", Toast.LENGTH_SHORT).show();
+                    try {
+                        URL serverUrl = new URL("https://meet.jit.si");
+
+                        JitsiMeetConferenceOptions.Builder builder =
+                                new JitsiMeetConferenceOptions.Builder();
+                        builder.setServerURL(serverUrl);
+                        builder.setWelcomePageEnabled(false);
+                        builder.setRoom(getIntent().getStringExtra(Constants.REMOTE_MSG_MEETING_ROOM));
+                        JitsiMeetActivity.launch(MainActivity.this,builder.build());
+                        finish();
+                    }catch (Exception e){
+                        Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                } else if (type.equals(Constants.REMOTE_MSG_INVITATION_REJECTED)){
+                    Toast.makeText(context, "Invitacion rechazada", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        }
+    };
+    @Override
+    protected void onStart() {
+        super.onStart();
+        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(
+                invitationResponseReceiver,
+                new IntentFilter(Constants.REMOTE_MSG_INVITATION_RESPONSE)
+        );
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(
+                invitationResponseReceiver
+        );
     }
 }
