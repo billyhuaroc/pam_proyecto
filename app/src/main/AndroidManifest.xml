@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="ucv.android.videomeeting">
+    package="ucv.android.oficinasjl">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,25 +15,20 @@
         android:theme="@style/Theme.VideoMeeting"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activities.activities.Prueba"></activity>
-        <activity
-            android:name=".activities.activities.OutgoingInvitationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".activities.activities.IncomingInvitationActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".activities.activities.ContactaActivity" />
-        <activity android:name=".activities.activities.IniciarSesion"></activity>
-        <activity android:name=".activities.activities.MainActivity">
+        <activity android:name=".actividades.MainActivity2" />
+        <activity android:name=".actividades.IniciarSesion">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".actividades.MainActivity">
+
+        </activity>
 
         <service
-            android:name=".activities.firebase.MensajeServices"
+            android:name=".firebase.MensajeToken"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

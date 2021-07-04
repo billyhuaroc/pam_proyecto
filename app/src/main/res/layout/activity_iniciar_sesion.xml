@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackground"
-    tools:context=".activities.activities.IniciarSesion">
+    android:background="@color/white"
+    tools:context=".actividades.IniciarSesion">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -19,12 +19,6 @@
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintTop_toTopOf="parent">
-
-            <!--<ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/ic_bg"
-                android:layout_gravity="center"/>-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -58,7 +52,7 @@
                     android:textStyle="normal"
                     android:includeFontPadding="false"
                     android:text="Email:"
-                    android:textColor="@color/colorPrimaryText"
+                    android:textColor="@color/black"
                     android:textSize="16sp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -77,7 +71,8 @@
                     android:drawablePadding="10dp"
                     android:hint="usuario@ejemplo.com"
                     android:inputType="textEmailAddress"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
@@ -89,7 +84,7 @@
                     android:textStyle="normal"
                     android:includeFontPadding="false"
                     android:text="Contraseña:"
-                    android:textColor="@color/colorPrimaryText"
+                    android:textColor="@color/black"
                     android:textSize="16sp"/>
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -108,7 +103,8 @@
                         android:imeOptions="actionNext"
                         android:hint="Ingrese su contraseña"
                         android:inputType="textPassword"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
@@ -146,8 +142,8 @@
                 android:layout_marginEnd="40dp"
                 android:includeFontPadding="false"
                 android:text="iniciar sesión"
-                android:textColor="@color/colorTextIcons"
-                android:backgroundTint=""
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/card_is"/>
 
             <ProgressBar

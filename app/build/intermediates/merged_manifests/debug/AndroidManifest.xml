@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ucv.android.videomeeting"
+    package="ucv.android.oficinasjl"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -48,25 +48,19 @@
         android:testOnly="true"
         android:theme="@style/Theme.VideoMeeting"
         android:usesCleartextTraffic="true" >
-        <activity android:name="ucv.android.videomeeting.activities.activities.Prueba" />
-        <activity
-            android:name="ucv.android.videomeeting.activities.activities.OutgoingInvitationActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="ucv.android.videomeeting.activities.activities.IncomingInvitationActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="ucv.android.videomeeting.activities.activities.ContactaActivity" />
-        <activity android:name="ucv.android.videomeeting.activities.activities.IniciarSesion" />
-        <activity android:name="ucv.android.videomeeting.activities.activities.MainActivity" >
+        <activity android:name="ucv.android.oficinasjl.actividades.MainActivity2" />
+        <activity android:name="ucv.android.oficinasjl.actividades.IniciarSesion" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="ucv.android.oficinasjl.actividades.MainActivity" >
+        </activity>
 
         <service
-            android:name="ucv.android.videomeeting.activities.firebase.MensajeServices"
+            android:name="ucv.android.oficinasjl.firebase.MensajeToken"
             android:exported="false" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -94,7 +88,7 @@
 
         <provider
             android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-            android:authorities="ucv.android.videomeeting.fileprovider"
+            android:authorities="ucv.android.oficinasjl.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -145,7 +139,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="ucv.android.videomeeting.firebaseinitprovider"
+            android:authorities="ucv.android.oficinasjl.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />

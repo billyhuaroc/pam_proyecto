@@ -8,8 +8,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "ucv.android.videomeeting"
-            minSdkVersion 21
+        applicationId "ucv.android.oficinasjl"
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -39,22 +39,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-
-    // RecyclerView
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-
     // Material Design
     implementation 'com.google.android.material:material:1.3.0'
-
-    // MultiDex
-    implementation 'com.android.support:multidex:1.0.3'
-
-    // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
-
-    // Swipe Refresh Layout
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
     //Firebase
     //implementation 'com.google.firebase:firebase-messaging:22.0.0'

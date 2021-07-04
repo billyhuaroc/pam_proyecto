@@ -1,4 +1,4 @@
-ucv.android.videomeeting
+ucv.android.oficinasjl
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -834,7 +834,6 @@ attr suffixText
 attr suffixTextAppearance
 attr suffixTextColor
 attr suggestionRowLayout
-attr swipeRefreshLayoutProgressSpinnerBackgroundColor
 attr switchMinWidth
 attr switchPadding
 attr switchStyle
@@ -1038,16 +1037,8 @@ color cardview_shadow_start_color
 color catalyst_redbox_background
 color checkbox_themeable_attribute_color
 color colorAccent
-color colorBackground
-color colorDivider
-color colorHintText
-color colorMeetingInvitationEnd
-color colorMeetingInvitationStart
 color colorPrimary
 color colorPrimaryDark
-color colorPrimaryText
-color colorSecundaryText
-color colorTextIcons
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1704,11 +1695,6 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable background_accept_invitation
-drawable background_meeting_invitation
-drawable background_meeting_invitation_user_icon
-drawable background_reject_invitation
-drawable background_user_icon
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1744,10 +1730,9 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
-drawable ic_accept
-drawable ic_audio
 drawable ic_back
 drawable ic_baseline_email_24
+drawable ic_bg
 drawable ic_clock_black_24dp
 drawable ic_email
 drawable ic_https
@@ -1758,8 +1743,6 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-drawable ic_reject
-drawable ic_video
 drawable images_avatar
 drawable images_btn_google_signin_dark_normal
 drawable images_dropboxlogo_square
@@ -1775,6 +1758,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable meeting
 drawable movile
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
@@ -1810,6 +1794,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id ListViewUniveridad
 id META
 id NO_DEBUG
 id SHIFT
@@ -1929,6 +1914,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id collapseActionView
+id conferenceName
 id confirm_button
 id contacta_aqui
 id container
@@ -2020,13 +2006,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageAcceptInvitation
-id imageAudioMeeting
 id imageBack
-id imageMeetingType
-id imageRejectInvitation
-id imageStopInvitation
-id imageVideoMeeting
+id img_foto
 id info
 id inputContraseña
 id inputEmail
@@ -2153,7 +2134,6 @@ id rn_redbox_report_label
 id rn_redbox_stack
 id rounded
 id row_index_key
-id salaTipo
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2212,7 +2192,6 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
-id swipeRefreshLayout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2233,24 +2212,16 @@ id test_radiobutton_android_button_tint
 id test_radiobutton_app_button_tint
 id text
 id text2
-id textCorreo
-id textEmail
 id textEnd
-id textErrorMessage
-id textFirstChar
-id textIncomingMeeting
-id textSendingMeeting
 id textSignOut
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTittle
 id textTop
-id textUsername
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_is
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2274,14 +2245,13 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvt_cuenta
+id tvt_nombre
+id tvt_usuario
 id unchecked
 id uniform
 id unlabeled
 id up
 id useLogo
-id usersRecyclerView
-id viewDivider
-id viewSupporter
 id view_offset_helper
 id view_tag_instance_handle
 id view_tag_native_id
@@ -2360,13 +2330,11 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_contacta
-layout activity_incoming_invitation
 layout activity_iniciar_sesion
 layout activity_jitsi_meet
 layout activity_main
-layout activity_outgoing_invitation
-layout activity_prueba
+layout activity_main2
+layout adapter_sala
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2385,7 +2353,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dev_loading_view
 layout fps_view
-layout item_container_user
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2446,7 +2413,6 @@ layout notification_template_part_time
 layout redbox_item_frame
 layout redbox_item_title
 layout redbox_view
-layout sala_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3572,7 +3538,6 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
-styleable SwipeRefreshLayout swipeRefreshLayoutProgressSpinnerBackgroundColor
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text
